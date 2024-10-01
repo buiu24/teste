@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="Css/PaginaInicial.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Sofia+Sans:ital,wght@0,1..1000;1,1..1000&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Sofia+Sans:ital,wght@0,1..1000;1,1..1000&family=Spline+Sans+Mono:ital,wght@0,300..700;1,300..700&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Sofia+Sans:ital,wght@0,1..1000;1,1..1000&family=Spline+Sans+Mono:ital,wght@0,300..700;1,300..700&family=Wendy+One&display=swap" rel="stylesheet">
+    <link rel="shortcut icon" href="img/logo.png" type="image/x-icon">
+    <title>PET BOM</title>
+</head>
+<body>
+    <header class="header">
+        <div class="logo">
+            <a href="/PetBomFront/CadastrarPetShop.html">
+            <img src="img/logo.png" alt="Logo">
+            </a>
+        </div>
+        <div class="search-bar">
+            <input type="text" placeholder="Pesquisar...">
+        </div>
+        <div class="icon">
+            <button id="openModalBtn" ><i class="bi bi-list"></i></button> 
+        </div>
+        <!-- O Modal -->
+    <div id="myModal" class="modal">
+        <!-- Conteúdo do Modal -->
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <h2>MENU</h2>
+            <!-- Quatro botões dentro do modal -->
+            <a href="CadastrarPet.html">
+            <button class="modal-button" onclick= "EntrarCadastroPet()">Cadastrar Pet</button>
+            </a>
+            <a href="CadastrarPetShop.html"></a>
+            <button class="modal-button" onclick= "CadastrarPetshop()">Cadastrar PetShop</button>
+            </a>
+        </div>
+    </div>
+    </header>
+    <main class="main">
+        <div class="button-container">
+            <a href="pag_2/LoveDog.html">
+            <button type="button" onclick="EntrarLoveDog()">LoveDog</button>
+            </a>
+            <a href="pag_3/petshops.html">
+            <button type="button" onclick="EntrarPetShop()">PetShops</button>
+            </a>
+        </div>
+        <br>
+        <div class="image-slider">
+            <img src="img/slider1.png" alt="Slider Image 1">
+            <img src="img/slider2.png" alt="Slider Image 2">
+            <img src="img/slider3.png" alt="Slider Image 3">
+        </div>
+        <br>
+        <p class="info">Recomendados</p>
+        <br>
+        <div class="scroll-container">
+            <div class="image-wrapper">
+                <a href="pag_4/labrador.html">
+                <img src="img/image1.png" alt="Image 1"onclick="Labrador()">
+                </a>
+                <p>Labrador Retriver</p>
+            </div>
+            <div class="image-wrapper">
+                <a href="pag_5/BorderCollie.html">
+                <img src="img/image5.png" alt="Image 2" onclick="Collie()">
+                </a>
+                <p>Border Collie </p>
+            </div>
+            <div class="image-wrapper">
+                <a href="pag_6/SãoBernardo.html">
+                <img src="img/image3.png" alt="Image 3" onclick="Sbe()">
+                </a>
+                <p>São Bernardo</p>
+            </div>
+            <div class="image-wrapper">
+                <img src="img/image4.png" alt="Image 4" >
+                <p>Lilu</p>
+            </div>
+            <div class="image-wrapper">
+                <img src="img/image5.png" alt="Image 5">
+                <p>Border Collie</p>
+            </div>
+            <div class="image-wrapper">
+                <img src="img/image6.png" alt="Image 6">
+                <p>Terrier Brasileiro</p>
+            </div>
+            <div class="image-wrapper">
+                <img src="img/image7.png" alt="Image 7">
+                <p>Studio Pet</p>
+            </div>
+            <div class="image-wrapper">
+                <img src="img/image8.png" alt="Image 8">
+                <p>Nova Cidade</p>
+            </div>
+            <div class="image-wrapper">
+                <img src="img/image9.png" alt="Image 9">
+                <p>São Bernardo</p>
+            </div>
+            <div class="image-wrapper">
+                <img src="img/image10.png" alt="Image 10">
+                <p>ComunidadePet</p>
+            </div>
+        </div>
+        <br>
+        <br>
+        <p class="info">Confira Nossos Serviços</p>
+        <br>
+        <div class="large-button-container">
+            <div class="large-button-wrapper">
+                <a href="pag_3/petshops.html">
+                <button class="large-button" onclick="EntrarPetShop()">
+                    <img src="img/redondo_1.png" alt="Button A">
+                </button>
+                <div class="button-label">PetShops</div>
+            </div>
+            </a>
+            <div class="large-button-wrapper">
+                <a href="pag_2/LoveDog.html">
+                <button class="large-button" onclick="EntrarLoveDog()">
+                    <img src="img/redondo_2.png" alt="Button B">
+                </button>
+                <div class="button-label">LoveDog</div>
+            </div>
+            </a>
+        </div>
+        <br>
+        <a aria-label="Chat on WhatsApp" href="https://wa.me/5514998952668" class="whatsapp-btn">
+            <div class="whatsapp-container">
+              <img alt="Chat on WhatsApp" src="Whatsapp.png" class="whatsapp-icon" />
+              <span class="whatsapp-text">Suporte</span>
+            </div>
+          </a>
+        <br>
+        <br>
+    </main>
+    <footer class="footer">
+        <div class="footer-columns">
+            <div class="footer-column">
+                <p>Mais informações podem ser encontradas</p>
+                <p>Instagram: @PetBom_Of</p>
+                <p>Facebook: PetBomOficial</p>
+            </div>
+            <div class="footer-column">
+                <p>Qualquer duvida entre em contado</p>
+                <p>Whattsap: (11) 1234-5678</p>
+                <p>Telefone: (11) 1234-5678</p>
+                <p>Email: suporte@petbom.com</p>
+            </div>
+        </div>
+        <div class="footer-info">
+            <p>  Copyright© 2024 PetBom Comércio e Participações S/A - Todos os direitos reservados</p>
+            <p>                     Desenvolvido por Rafaela, Pedro D, Kauã H, Kaua S e Evelin</p>
+        </div>
+    </footer>
+    <script src="js/PaginaInicial.js"></script>
+</body>
+</html>

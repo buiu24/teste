@@ -1,0 +1,171 @@
+body {
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    font-family: "Sofia Sans", sans-serif;
+}
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+    background-color: #FFFA76;
+}
+
+.logo img {
+    height: 150px;
+}
+
+.search-bar {
+    flex-grow: 1;
+    max-width: 1000px;
+    margin: 0 20px;
+}
+
+.search-bar input {
+    font-size: 20px;
+    width: 100%;
+    padding: 8px;
+    background-color: #D9D9D9;
+    border: none;
+    border-radius: 25px;
+}
+
+.icon button {
+    color: #78E7FF;
+    height: 100px;
+    width: 100px;
+    font-size: 40px;
+    border: none;
+    background: none;
+    cursor: pointer;
+}
+
+.main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 20px;
+}
+
+#listaPetShop {
+    list-style-type: none;
+    padding: 0;
+    width: 90%;
+    margin: 0 auto;
+}
+
+.petshop {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    margin-bottom: 20px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    padding: 20px;
+    background-color: #f9f9f9;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.petshop img {
+    width: 200px;
+    height: 200px;
+    object-fit: cover;
+    margin-bottom: 20px;
+    border: 2px solid #78E7FF;
+    border-radius: 8px;
+}
+
+.petshop table {
+    width: 100%;
+    border-collapse: collapse;
+    font-family: "Spline Sans Mono", monospace;
+}
+
+.petshop th, .petshop td {
+    padding: 10px;
+    text-align: left;
+}
+
+.petshop th {
+    color: rgb(66, 219, 253);
+    border-bottom: 2px solid #ddd;
+    font-weight: bold;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.petshop td {
+    background-color: #f2f2f2;
+    color: #0b13f9;
+    border-bottom: 1px solid #ddd;
+}
+
+.petshop tr:last-child td {
+    border-bottom: none;
+}
+
+.petshop button {
+    padding: 10px 20px;
+    font-size: 16px;
+    border: none;
+    border-radius: 8px;
+    background-color: #78E7FF;
+    color: white;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.petshop button:hover {
+    background-color: #4faac9;
+}
+
+a {
+    color: #3000f0;
+    text-decoration: none;
+    transition: all 0.5s ease;
+}
+
+a:hover {
+    transform: scale(1.1); 
+}
+.whatsapp-btn {
+    position: fixed;
+    bottom: 15px; /* Distância da parte inferior da página */
+    right: 15px;  /* Distância da parte direita da página */
+    z-index: 1000; /* Garante que o botão fique por cima de outros elementos */
+    background-color: #49D2F0; /* Cor de fundo azul */
+    color: #ffffff; /* Cor do texto */
+    font-family: Arial, sans-serif;
+    font-weight: bold;
+    border: none; /* Remove a borda */
+    border-radius: 20px; /* Bordas arredondadas */
+    padding: 5px 10px; /* Espaçamento menor dentro do botão */
+    display: flex;
+    align-items: center;
+    text-decoration: none; /* Remove o sublinhado do link */
+    cursor: pointer;
+    transition: background-color 0.3s ease; /* Transição suave ao passar o mouse */
+  }
+
+  .whatsapp-btn:hover {
+    background-color: #37A9C1; /* Mudança de cor no hover para um azul mais escuro */
+  }
+
+  .whatsapp-container {
+    display: flex;
+    align-items: center;
+  }
+
+  .whatsapp-icon {
+    width: 20px; /* Ícone de WhatsApp ajustado para 20px */
+    height: 20px;
+    margin-right: 5px;
+  }
+
+  .whatsapp-text {
+    font-size: 10px; /* Texto pequeno */
+    color: #ffffff; /* Cor branca para o texto */
+  }

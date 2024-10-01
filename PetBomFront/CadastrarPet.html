@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="Css/CadastrarPet.css">
+    <title>PET BOM</title>
+</head>
+<body>
+    <div class="container">
+        <div class="ossinhos3">
+            <img src="img/ossinhos.jpg" alt="ossinhos">
+        </div>
+        <div class="ossinhos4">
+            <img src="img/ossinhos.jpg" alt="ossinhos">
+        </div>
+       
+        <div class="box" id="registerBox">
+            <form id="petForm">
+                <fieldset>
+                    <legend class="legenda">
+                        <span class="pet-color">Pet</span> <span class="bom-color">Bom</span>
+                    </legend>
+                    <br><br>
+                    <div class="inputBox">
+                        <input type="text" name="name" id="nomeDoPet" class="inputUser" required>
+                        <label for="nome" class="labelInput">Nome do Pet : </label>
+                    </div>
+                    <br><br>
+                    <div class="inputBox">
+                        <input type="number" name="Idade" id="idadeDoPet" class="inputUser" required>
+                        <label for="idade" class="labelInput">Idade : </label>
+                    </div>
+                    <br><br>
+                    <div class="inputBox">
+                        <input type="text" name="Raça" id="raca" class="inputUser" required>
+                        <label for="raca" class="labelInput">Raça : </label>
+                    </div>
+                    <br><br>
+                    <div class="inputBox">
+                        <input type="text" name="especie" id="especie" class="inputUser" required>
+                        <label for="especie" class="labelInput">Espécie : </label>
+                    </div>
+                    <br><br>
+                    <div class="inputBox">
+                        <label for="imagem" class="imagemm">Imagem do Pet : </label>
+                        <br><br>
+                        <input type="file" name="imagem" id="imagem" class="inputUser" required>
+                    </div>
+                    <br><br>
+                    <button class="btn" type="submit">Cadastrar</button>
+                </fieldset>
+            </form>
+        </div>
+        <a aria-label="Chat on WhatsApp" href="https://wa.me/5514998952668" class="whatsapp-btn">
+            <div class="whatsapp-container">
+              <img alt="Chat on WhatsApp" src="Whatsapp.png" class="whatsapp-icon" />
+              <span class="whatsapp-text">Suporte</span>
+            </div>
+          </a>
+        <a class="clique" href="pag_2/LoveDog.html">Voltar</a>
+        <img class="logocadastro" src="img/logocadastro.png">
+        <div id="successMessage" style="display:none; color: green;">
+            Cadastro feito com sucesso!
+        </div>
+    </div>
+    <script src="js/CadastrarPet.js"></script>
+</body>
+</html>
+ 

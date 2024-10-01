@@ -1,0 +1,215 @@
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 0;
+
+}
+
+
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 50px;
+}
+
+.box {
+    padding: 35px; 
+    border-radius: 10px;
+    color: black;
+    margin-bottom: 17px;
+    border: 5px solid #78E7FF;
+    width: 100%; 
+    max-width: 700px;
+     
+}
+
+
+.inputBox {
+    position: relative;
+}
+
+.inputUser {
+    background: none;
+    border: none;
+    border-bottom: 1px solid black;
+    outline: none;
+    color: rgb(0, 0, 0);
+    font-size: 15px;
+    width: 100%;
+    letter-spacing: 2px;
+}
+
+.labelInput {
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    pointer-events: none;
+    transition: .5s;
+}
+
+.inputUser:focus ~ .labelInput,
+.inputUser:valid ~ .labelInput {
+    top: -20px;
+    font-size: 12px;
+    color: #78E7FF;
+}
+
+.inputUser.largeInput {
+    width: 315px;
+    height: 40px;
+}
+
+.btn {
+    background: #FFEE96;
+    width: 100%;
+    border: none;
+    padding: 15px;
+    color: #49D2F0;
+    font-size: 16px;
+    cursor: pointer;
+    border-radius: 10px;
+    letter-spacing: 4px;
+    transition: .5s;
+    text-transform: uppercase;
+    text-decoration: none;
+    display: inline-block;
+}
+
+.btn:hover {
+    background: #FFEE96;
+    color: #07a6ca;
+    border-radius: 5px;
+    box-shadow: 0 0 5px #49D2F0,
+                0 0 20px #49D2F0,
+                0 0 40px #49D2F0,
+                0 0 70px #49D2F0;
+    
+}
+.btn span {
+    position: fixed;
+    
+  }
+
+.btn span:nth-child(1) {
+    background: linear-gradient(90deg, transparent, #49D2F0);
+    animation: btn-anim1 1s linear infinite;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 2px;
+}
+
+.logocadastro {
+   display: flex;
+    width: 280px;
+    height: 260px;
+   margin-top: -700px; 
+}
+
+.legenda {
+    background-color: #FFEE96;
+    border-radius: 40%;
+    height: 25px;
+    width: auto;
+    padding: 5px 20px;
+    display: flex; 
+    justify-content: center;
+    align-items: center;
+    margin: 0 auto;
+}
+
+.pet-color {
+    color: #BEB700;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+}
+
+.bom-color {
+    color: #78E7FF;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+}
+
+.clique {
+    text-decoration: none;
+    color: #78E7FF;
+}
+
+.clique:hover {
+    color: #007BFF;
+    transition: 0.5s;
+}
+
+
+.ossinhos3 {
+    position: absolute;
+    width: 334px;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 78%; /* Posiciona a imagem ao lado direito do conteúdo */
+    z-index: 0; /* Coloca a imagem de fundo atrás de tudo */
+    overflow: hidden;
+}
+
+.ossinhos3 img {
+    width: 710px;
+    height: 780px;
+    transform: translateX(-53%); /* Move a imagem para a esquerda */
+}
+
+.ossinhos4 {
+    position: absolute;
+    width: 700px;
+    top: 0;
+    right: 72px;
+    bottom: 0;
+    left: 0; /* Posiciona a imagem ao lado direito do conteúdo */
+    z-index: 0; /* Coloca a imagem de fundo atrás de tudo */
+}
+
+.ossinhos4 img {
+    width: 700px;
+    height: 699px;
+    transform: translateX(-53%); /* Move a imagem para a esquerda */
+}
+
+.whatsapp-btn {
+    position: fixed;
+    bottom: 15px; /* Distância da parte inferior da página */
+    right: 15px;  /* Distância da parte direita da página */
+    z-index: 1000; /* Garante que o botão fique por cima de outros elementos */
+    background-color: #49D2F0; /* Cor de fundo azul */
+    color: #ffffff; /* Cor do texto */
+    font-family: Arial, sans-serif;
+    font-weight: bold;
+    border: none; /* Remove a borda */
+    border-radius: 20px; /* Bordas arredondadas */
+    padding: 5px 10px; /* Espaçamento menor dentro do botão */
+    display: flex;
+    align-items: center;
+    text-decoration: none; /* Remove o sublinhado do link */
+    cursor: pointer;
+    transition: background-color 0.3s ease; /* Transição suave ao passar o mouse */
+  }
+
+  .whatsapp-btn:hover {
+    background-color: #37A9C1; /* Mudança de cor no hover para um azul mais escuro */
+  }
+
+  .whatsapp-container {
+    display: flex;
+    align-items: center;
+  }
+
+  .whatsapp-icon {
+    width: 20px; /* Ícone de WhatsApp ajustado para 20px */
+    height: 20px;
+    margin-right: 5px;
+  }
+
+  .whatsapp-text {
+    font-size: 10px; /* Texto pequeno */
+    color: #ffffff; /* Cor branca para o texto */
+  }

@@ -1,0 +1,330 @@
+body {
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+    background-color: #FFFA76;
+}
+.logo {
+    display: flex;
+    align-items: center;
+}
+.logo img {
+    height: 150px;
+}
+.search-bar {
+    flex-grow: 1;
+    max-width: 1000px;
+    margin: 0 20px;
+}
+.search-bar input {
+    font-size: 20px;
+    width: 100%;
+    padding: 8px;
+    background-color: #D9D9D9;
+    border: none;
+    border-radius: 25px;
+    font-family: "Sofia Sans", sans-serif;
+}
+.icon {
+    display: flex;
+    align-items: center;
+}
+.icon button {
+    color: #78E7FF;
+    height: 100px;
+    width: 100px;
+    font-size: 40px;
+    border: none;
+    outline: none;
+    background: none;
+    cursor: pointer;
+}
+.main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 20px;
+}
+.image-slider {
+    width: 90%;
+    height: 700px; /* Ajuste conforme necessário */
+    overflow: hidden;
+    border: 2px solid #ccc;
+    border-radius: 4px;
+}
+.image-slider img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+.button-container {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    font-family: "Spline Sans Mono", monospace;
+}
+
+.button-container button {
+    margin: 25px;
+    padding: 16px 70px;
+    font-size: 20px;
+    border: none;
+    border-radius: 25px;
+    background-color: #78E7FF;
+    color: white;
+    cursor: pointer;
+    letter-spacing: 8px;
+    transition: 1.0s;
+    text-transform: uppercase;
+    text-decoration: none;
+}
+
+.button-container button:hover {
+    background: #FFEE96;
+    color: #49D2F0;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    border-radius: 5px;
+    box-shadow: 0 0 5px #49D2F0,
+                0 0 20px #49D2F0,
+                0 0 40px #49D2F0,
+                0 0 70px #49D2F0;
+}
+.scroll-container {
+    display: flex;
+    overflow-x: auto;
+    white-space: nowrap;
+    width: 90%;
+    margin: 0 50px;
+    margin-top: 20px;
+    border: 1px solid #ccc;
+    padding: 10px;
+    box-sizing: border-box;
+}
+.scroll-container img {
+    text-align: center;
+    height: 100px;
+    width: 100px;
+    border-radius: 4px;
+}
+.image-wrapper{
+    display: inline-block;
+    border: 3px solid #78E7FF;
+    border-radius: 5px;
+    margin: 10px;
+    padding: 5px;
+    
+}
+.image-wrapper img{
+    height: 100px;
+}
+.image-wrapper p {
+    text-align: center;
+    font-size: 10px;
+    font-family: "Spline Sans Mono", monospace;
+}
+.two-column-container {
+    display: flex;
+    justify-content: space-around;
+    width: 90%;
+    margin-top: 20px;
+}
+.column {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 30%; /* Assegura que cada coluna ocupa 45% do espaço disponível */
+}
+.column img {
+    width: 170%;
+    height: 270px;
+    margin-bottom: 10px; /* Espaçamento entre as imagens */
+    border-radius: 5%;
+}
+.column p {
+    text-align: center;
+    font-size: 20px;
+    color: #333;
+    font-family: "Wendy One", sans-serif;
+}
+.single-column-container {
+    text-align: center;
+    width: 90%;
+    margin-top: 20px;
+    background-color: #78E7FF; /* Substitua pelo código da cor desejada */
+    padding: 20px; /* Adiciona algum preenchimento para um melhor visual */
+    border-radius: 8px; /* Adiciona bordas arredondadas */
+}
+.text-container {
+    font-family: "Sofia Sans", sans-serif;
+    margin-bottom: 20px;
+}
+.selector-container {
+    width: 100%;
+    margin-top: 20px;
+    font-family: "Sofia Sans", sans-serif;
+}
+.selector-container label {
+    font-family: "Sofia Sans", sans-serif;
+    margin: 5px 0;
+}
+.selector-container select {
+    font-family: "Sofia Sans", sans-serif;
+    text-align: center;
+    width: 400px; /* Defina a largura desejada */
+    padding: 6px;
+    border: none;
+    border-radius: 20px;
+    margin-bottom: 10px;
+    background-color: #D9D9D9;
+}
+.sliding-columns {
+    display: flex;
+    justify-content: space-around;
+    width: 90%;
+    margin-top: 20px;
+}
+.sliding-images {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    overflow: hidden;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+.sliding-image-info {
+    margin-bottom: 20px; /* Espaçamento entre cada par de foto e informações */
+}
+.sliding-image-info .info {
+    text-align: center;
+    margin-top: 5px; /* Espaçamento entre a foto e as informações */
+}
+.sliding-images img {
+    width: 100%;
+    height: auto;
+    transition: transform 1s ease-in-out;
+}
+.footer {
+    padding: 20px;
+    background-color: #FFFA76;
+    font-family: "Sofia Sans", sans-serif;
+    font-size: 20px;
+}
+.footer-columns {
+    display: flex;
+    justify-content: space-between;
+}
+.footer-column {
+    flex: 1;
+    padding: 10px;
+}
+.footer-column img {
+    max-width: 100%;
+    height: auto;
+}
+.footer-info {
+    text-align: center;
+    padding: 10px;
+    border-radius: 4px;
+    font-size: 20px;
+}
+/* Estilos para o Modal */
+.modal {
+    display: none; /* Oculto por padrão */
+    position: fixed; /* Fixo no fundo */
+    z-index: 1; /* Fica em cima */
+    left: 0;
+    top: 0;
+    width: 100%; /* Largura total */
+    height: 100%; /* Altura total */
+    overflow: auto; /* Habilita rolagem se necessário */
+    background-color: rgb(0,0,0); /* Fundo preto com opacidade */
+    background-color: rgba(0,0,0,0.4); /* Preto com opacidade */
+}
+
+/* Conteúdo do Modal */
+.modal-content {
+    background-color: #fefefe;
+    margin: 15% auto; /* 15% do topo e centralizado */
+    padding: 20px;
+    border: 1px solid #888;
+    width: 80%; /* Pode ser ajustado conforme necessário */
+    text-align: center;
+    font-family: "Wendy One", sans-serif;
+    font-size: 20px;
+    color: #4C4C4C;
+}
+
+/* Botão para fechar o modal */
+.close {
+    color: #aaa;
+    float: right;
+    font-size: 50px;
+    font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+/* Estilos para os botões dentro do modal */
+.modal-button {
+    display: block; /* Faz com que os botões sejam exibidos como blocos */
+    width: 100%; /* Faz com que os botões ocupem toda a largura disponível */
+    margin: 10px 0; /* Margem superior e inferior para espaçamento */
+    padding: 10px;
+    font-family: "Sofia Sans", sans-serif;
+    font-size: 20px;
+    cursor: pointer;
+    border-radius: 50px;
+    border: none;
+    background-color: #78E7FF;
+    color:#ffffff
+}
+.whatsapp-btn {
+    position: fixed;
+    bottom: 15px; /* Distância da parte inferior da página */
+    right: 15px;  /* Distância da parte direita da página */
+    z-index: 1000; /* Garante que o botão fique por cima de outros elementos */
+    background-color: #49D2F0; /* Cor de fundo azul */
+    color: #ffffff; /* Cor do texto */
+    font-family: Arial, sans-serif;
+    font-weight: bold;
+    border: none; /* Remove a borda */
+    border-radius: 20px; /* Bordas arredondadas */
+    padding: 5px 10px; /* Espaçamento menor dentro do botão */
+    display: flex;
+    align-items: center;
+    text-decoration: none; /* Remove o sublinhado do link */
+    cursor: pointer;
+    transition: background-color 0.3s ease; /* Transição suave ao passar o mouse */
+  }
+
+  .whatsapp-btn:hover {
+    background-color: #37A9C1; /* Mudança de cor no hover para um azul mais escuro */
+  }
+
+  .whatsapp-container {
+    display: flex;
+    align-items: center;
+  }
+
+  .whatsapp-icon {
+    width: 20px; /* Ícone de WhatsApp ajustado para 20px */
+    height: 20px;
+    margin-right: 5px;
+  }
+
+  .whatsapp-text {
+    font-size: 10px; /* Texto pequeno */
+    color: #ffffff; /* Cor branca para o texto */
+  }

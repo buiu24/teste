@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="Css/login.css">
+    <title>Pet Bom</title>
+</head>
+<body>
+    <div class="container">
+        <div class="ossinhos">
+            <img src="/img/ossinhos.jpg" alt="ossinhos">
+        </div>
+        <div class="ossinhos2">
+            <img src="/img/ossinhos.jpg" alt="ossinhos">
+        </div>
+        
+        <div class="box" id="registerBox">
+            <form id="loginForm">
+                <fieldset>
+                    <legend class="legenda">
+                        <span class="pet-color">Pet</span> <span class="bom-color">Bom</span>
+                    </legend>
+                    <br><br>
+                    <div class="inputBox">
+                        <input type="text" name="email" id="email" class="inputUser" required>
+                        <label for="email" class="labelInput">E-mail : </label>
+                    </div>
+                    <br>
+                    <a aria-label="Chat on WhatsApp" href="https://wa.me/5514998952668" class="whatsapp-btn">
+                        <div class="whatsapp-container">
+                          <img alt="Chat on WhatsApp" src="Whatsapp.png" class="whatsapp-icon" />
+                          <span class="whatsapp-text">Suporte</span>
+                        </div>
+                      </a>
+                    <br>
+                    <div class="inputBox">
+                        <input type="password" name="senha" id="senha" class="inputUser" required>
+                        <label for="senha" class="labelInput">Senha : </label>
+                    </div>
+                    <br><br>
+                    <button class="btn" type="submit">Login</button>
+                    <span id="loginError" style="display: none; color: red;">Erro ao fazer login!</span>
+                </fieldset>
+            </form>
+        </div>
+        <a class="clique" href="Cadastrar.html">Clique aqui para Criar sua Conta!</a>
+        <img class="logocadastro" src="img/logocadastro.png">
+    </div>
+    <script src="js/login.js"></script>
+</body>
+</html>

@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="Css/CadastrarPetShop.css">
+    <title>PET BOM</title>
+</head>
+<body>
+    <div class="container">
+        <div class="ossinhos3">
+            <img src="img/ossinhos.jpg" alt="ossinhos">
+        </div>
+        <div class="ossinhos4">
+            <img src="img/ossinhos.jpg" alt="ossinhos">
+        </div>
+       
+        <div class="box" id="registerBox">
+            <form id="petForm">
+                <fieldset>
+                    <legend class="legenda">
+                        <span class="pet-color">Pet</span> <span class="bom-color">Bom</span>
+                    </legend>
+                    <br><br>
+                    <div class="inputBox">
+                        <input type="text" name="name" id="nomeDoPetShop" class="inputUser" required>
+                        <label for="nomeDoPetShop" class="labelInput">Nome do PetShop : </label>
+                    </div>
+                    <br><br>
+                    <div class="inputBox">
+                        <input type="tel" name="contato" id="contato" class="inputUser" required>
+                        <label for="contato" class="labelInput">Contato : </label>
+                    </div>
+                    <br><br>
+                    <div class="inputBox">
+                        <input type="text" name="endereco" id="endereco" class="inputUser" required>
+                        <label for="endereco" class="labelInput">Localização : </label>
+                    </div>
+                    <br><br>
+                    <div class="inputBox">
+                        <input type="text" name="servicosOferecidos" id="servicosOferecidos" class="inputUser" required>
+                        <label for="servicosOferecidos" class="labelInput">Serviços Oferecidos : </label>
+                    </div>
+                    <br><br>
+                    <div class="inputBox">
+                        <p>Tipos de Animal que Será Atendido :</p>
+                        <input type="radio" id="Gato" name="tipoAnimal" value="Gato" required>
+                        <label for="Gato">Gato</label><br>
+                        <input type="radio" id="Cachorro" name="tipoAnimal" value="Cachorro" required>
+                        <label for="Cachorro">Cachorro</label><br>
+                        <input type="radio" id="Outros" name="tipoAnimal" value="Outros" required>
+                        <label for="Outros">Outros</label><br><br>
+                    </div>
+                    <div class="inputBox" id="outrosTipoContainer" style="display:none;">
+                        <input type="text" name="outrosTipo" id="outrosTipo" class="inputUser">
+                        <label for="outrosTipo" class="labelInput">Tipo de Animal : </label>
+                    </div>
+                    <br>
+                    <div class="inputBox">
+                        <label for="imagem" class="imagemm">Imagem do Pet : </label>
+                        <br><br>
+                        <input type="file" name="imagem" id="imagem" class="inputUser" required>
+                    </div>
+                    <br>
+                    <a aria-label="Chat on WhatsApp" href="https://wa.me/5514998952668" class="whatsapp-btn">
+                        <div class="whatsapp-container">
+                          <img alt="Chat on WhatsApp" src="Whatsapp.png" class="whatsapp-icon" />
+                          <span class="whatsapp-text">Suporte</span>
+                        </div>
+                      </a>
+                    <button class="btn" type="submit">Cadastrar</button>
+                </fieldset>
+            </form>
+        </div>
+        <a class="clique" href="pag_2/LoveDog.html">Voltar</a>
+        <img class="logocadastro" src="img/logocadastro.png">
+        <div id="successMessage" style="display:none; color: green;">
+            Cadastro feito com sucesso!
+        </div>
+    </div>
+    <script src="CadastrarPetShop.js"></script>
+</body>
+</html>

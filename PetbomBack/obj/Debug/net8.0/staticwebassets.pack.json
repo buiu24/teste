@@ -1,0 +1,69 @@
+{
+  "Files": [
+    {
+      "Id": "C:\\Users\\kauaCarmo\\Documents\\projeto_Final\\PetBom\\PetBomBack\\wwwroot\\images\\WIN_20231130_09_51_36_Pro.jpg",
+      "PackagePath": "staticwebassets\\images\\WIN_20231130_09_51_36_Pro.jpg"
+    },
+    {
+      "Id": "C:\\Users\\kauaCarmo\\Documents\\projeto_Final\\PetBom\\PetBomBack\\wwwroot\\images\\WIN_20231130_09_51_45_Pro.jpg",
+      "PackagePath": "staticwebassets\\images\\WIN_20231130_09_51_45_Pro.jpg"
+    },
+    {
+      "Id": "C:\\Users\\kauaCarmo\\Documents\\projeto_Final\\PetBom\\PetBomBack\\wwwroot\\images\\WIN_20231130_13_49_07_Pro.jpg",
+      "PackagePath": "staticwebassets\\images\\WIN_20231130_13_49_07_Pro.jpg"
+    },
+    {
+      "Id": "C:\\Users\\kauaCarmo\\Documents\\projeto_Final\\PetBom\\PetBomBack\\wwwroot\\images\\baixados.jfif",
+      "PackagePath": "staticwebassets\\images\\baixados.jfif"
+    },
+    {
+      "Id": "C:\\Users\\kauaCarmo\\Documents\\projeto_Final\\PetBom\\PetBomBack\\wwwroot\\images\\gatocahorro.png",
+      "PackagePath": "staticwebassets\\images\\gatocahorro.png"
+    },
+    {
+      "Id": "C:\\Users\\kauaCarmo\\Documents\\projeto_Final\\PetBom\\PetBomBack\\wwwroot\\images\\image1.png",
+      "PackagePath": "staticwebassets\\images\\image1.png"
+    },
+    {
+      "Id": "C:\\Users\\kauaCarmo\\Documents\\projeto_Final\\PetBom\\PetBomBack\\wwwroot\\images\\image10.png",
+      "PackagePath": "staticwebassets\\images\\image10.png"
+    },
+    {
+      "Id": "C:\\Users\\kauaCarmo\\Documents\\projeto_Final\\PetBom\\PetBomBack\\wwwroot\\images\\image2.png",
+      "PackagePath": "staticwebassets\\images\\image2.png"
+    },
+    {
+      "Id": "C:\\Users\\kauaCarmo\\Documents\\projeto_Final\\PetBom\\PetBomBack\\wwwroot\\images\\image3.png",
+      "PackagePath": "staticwebassets\\images\\image3.png"
+    },
+    {
+      "Id": "C:\\Users\\kauaCarmo\\Documents\\projeto_Final\\PetBom\\PetBomBack\\wwwroot\\images\\image6.png",
+      "PackagePath": "staticwebassets\\images\\image6.png"
+    },
+    {
+      "Id": "C:\\Users\\kauaCarmo\\Documents\\projeto_Final\\PetBom\\PetBomBack\\wwwroot\\images\\image9.png",
+      "PackagePath": "staticwebassets\\images\\image9.png"
+    },
+    {
+      "Id": "C:\\Users\\kauaCarmo\\Documents\\projeto_Final\\PetBom\\PetBomBack\\wwwroot\\images\\pacote-banho-e-tosa.png",
+      "PackagePath": "staticwebassets\\images\\pacote-banho-e-tosa.png"
+    },
+    {
+      "Id": "obj\\Debug\\net8.0\\staticwebassets\\msbuild.PetbomBack.Microsoft.AspNetCore.StaticWebAssets.props",
+      "PackagePath": "build\\Microsoft.AspNetCore.StaticWebAssets.props"
+    },
+    {
+      "Id": "obj\\Debug\\net8.0\\staticwebassets\\msbuild.build.PetbomBack.props",
+      "PackagePath": "build\\PetbomBack.props"
+    },
+    {
+      "Id": "obj\\Debug\\net8.0\\staticwebassets\\msbuild.buildMultiTargeting.PetbomBack.props",
+      "PackagePath": "buildMultiTargeting\\PetbomBack.props"
+    },
+    {
+      "Id": "obj\\Debug\\net8.0\\staticwebassets\\msbuild.buildTransitive.PetbomBack.props",
+      "PackagePath": "buildTransitive\\PetbomBack.props"
+    }
+  ],
+  "ElementsToRemove": []
+}

@@ -1,0 +1,289 @@
+
+body {
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+    background-color: #FFFA76;
+}
+.logo img {
+    height: 100px;
+}
+.search-bar {
+    flex-grow: 1;
+    max-width: 1000px;
+    margin: 0 20px;
+}
+.search-bar input {
+    font-size: 16px;
+    width: 100%;
+    padding: 8px;
+    background-color: #D9D9D9;
+    border: none;
+    border-radius: 25px;
+    font-family: "Sofia Sans", sans-serif;
+}
+.icon button {
+    color: #78E7FF;
+    height: 50px;
+    width: 50px;
+    font-size: 30px;
+    border: none;
+    outline: none;
+    background: none;
+    cursor: pointer;
+}
+.main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 20px;
+}
+.image-slider {
+    width: 90%;
+    height: 540px;
+    overflow: hidden;
+    border: 2px solid #ccc;
+    border-radius: 4px;
+    margin-bottom: 20px;
+}
+.image-slider img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+.button-container {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+}
+
+.button-container button {
+    margin: 25px;
+    padding: 16px 70px;
+    font-size: 15px;
+    border: none;
+    border-radius: 25px;
+    background-color: #78E7FF;
+    color: white;
+    cursor: pointer;
+    letter-spacing: 8px;
+    transition: 1.0s;
+    text-transform: uppercase;
+    text-decoration: none;
+}
+
+.button-container button:hover {
+    background: #FFEE96;
+    color: #49D2F0;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    border-radius: 5px;
+    box-shadow: 0 0 5px #49D2F0,
+                0 0 20px #49D2F0,
+                0 0 40px #49D2F0,
+                0 0 70px #49D2F0;
+}
+.scroll-container {
+    display: flex;
+    overflow-x: auto;
+    white-space: nowrap;
+    width: 90%;
+    margin: 0 20px;
+    margin-top: 20px;
+    border: 1px solid #ccc;
+    padding: 10px;
+    box-sizing: border-box;
+}
+.image-wrapper {
+    display: inline-block;
+    border: 2px solid #78E7FF;
+    border-radius: 15px;
+    margin: 10px;
+    padding: 12.65px;
+}
+.image-wrapper img {
+    height: 80px;
+    width: 80px;
+    border-radius: 10px;
+}
+.image-wrapper p {
+    text-align: center;
+    font-size: 10px;
+    font-family: "Spline Sans Mono", monospace;
+}
+.large-button-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 20px;
+}
+.large-button-wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 0 50px;
+}
+.large-button {
+    position: relative;
+    width: 250px;
+    height: 250px;
+    font-size: 14px;
+    border: none;
+    border-radius: 50%;
+    background-color: #ffffff;
+    color: white;
+    cursor: pointer;
+    overflow: hidden;
+}
+.large-button img {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 50%;
+}
+.large-button:hover {
+    background-color: #218838;
+}
+.button-label {
+    margin-top: 5px;
+    font-size: 16px;
+    text-align: center;
+    font-family: "Wendy One", sans-serif;
+    color: #4C4C4C;
+}
+.info {
+    font-family: "Spline Sans Mono", monospace;
+    font-size: 12px;
+}
+.footer {
+    padding: 5px;
+    background-color: #FFFA76;
+    font-family: "Sofia Sans", sans-serif;
+    font-size: 20px;
+}
+.footer-columns {
+    display: flex;
+    justify-content: center;
+    
+}
+.footer-column {
+    flex: 1;
+    padding: 10px;
+}
+.footer-info {
+    text-align: center;
+    padding: 5px;
+    border-radius: 44px;
+    font-size: 10px;
+    color: #78E7FF;
+}
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0,0,0,0.4);
+}
+.modal-content {
+    background-color: #fefefe;
+    margin: 15% auto;
+    padding: 20px;
+    border: 1px solid #888;
+    width: 80%;
+    text-align: center;
+    font-family: "Wendy One", sans-serif;
+    font-size: 18px;
+    color: #4C4C4C;
+}
+.close {
+    color: #aaa;
+    float: right;
+    font-size: 30px;
+    font-weight: bold;
+}
+.close:hover,
+.close:focus {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+    transform: scale(2.3);
+    transition: 1.2s;
+}
+.modal-button {
+    display: block;
+    width: 100%;
+    margin: 10px 0;
+    padding: 10px;
+    font-family: "Sofia Sans", sans-serif;
+    font-size: 16px;
+    cursor: pointer;
+    border-radius: 25px;
+    border: none;
+    background-color: #78E7FF;
+    color: #ffffff;
+    transition: 1.0s;
+}
+
+.modal-button:hover {
+    background: #FFEE96;
+    color: #49D2F0;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    border-radius: 5px;
+    box-shadow: 0 0 5px #49D2F0,
+                0 0 20px #49D2F0,
+                0 0 40px #49D2F0,
+                0 0 70px #49D2F0;
+}
+
+.whatsapp-btn {
+    position: fixed;
+    bottom: 15px; /* Distância da parte inferior da página */
+    right: 15px;  /* Distância da parte direita da página */
+    z-index: 1000; /* Garante que o botão fique por cima de outros elementos */
+    background-color: #49D2F0; /* Cor de fundo azul */
+    color: #ffffff; /* Cor do texto */
+    font-family: Arial, sans-serif;
+    font-weight: bold;
+    border: none; /* Remove a borda */
+    border-radius: 20px; /* Bordas arredondadas */
+    padding: 5px 10px; /* Espaçamento menor dentro do botão */
+    display: flex;
+    align-items: center;
+    text-decoration: none; /* Remove o sublinhado do link */
+    cursor: pointer;
+    transition: background-color 0.3s ease; /* Transição suave ao passar o mouse */
+  }
+
+  .whatsapp-btn:hover {
+    background-color: #37A9C1; /* Mudança de cor no hover para um azul mais escuro */
+  }
+
+  .whatsapp-container {
+    display: flex;
+    align-items: center;
+  }
+
+  .whatsapp-icon {
+    width: 20px; /* Ícone de WhatsApp ajustado para 20px */
+    height: 20px;
+    margin-right: 5px;
+  }
+
+  .whatsapp-text {
+    font-size: 10px; /* Texto pequeno */
+    color: #ffffff; /* Cor branca para o texto */
+  }
