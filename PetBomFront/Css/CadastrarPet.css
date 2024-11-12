@@ -134,6 +134,7 @@ body {
 .clique {
     text-decoration: none;
     color: #78E7FF;
+    cursor: pointer;
 }
 
 .clique:hover {

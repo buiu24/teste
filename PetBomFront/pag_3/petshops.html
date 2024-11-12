@@ -1,9 +1,9 @@
 <!DOCTYPE html>
-<html lang="pt">
+<html lang="pt-BR">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="petshops.css">
+    <link rel="stylesheet" href="../../PetBomFront/pag_3/petshops.css">  
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -12,116 +12,116 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Sofia+Sans:ital,wght@0,1..1000;1,1..1000&family=Spline+Sans+Mono:ital,wght@0,300..700;1,300..700&display=swap" rel="stylesheet">
     <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Baloo+Paaji+2:wght@400..800&display=swap" rel="stylesheet">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Sofia+Sans:ital,wght@0,1..1000;1,1..1000&family=Spline+Sans+Mono:ital,wght@0,300..700;1,300..700&family=Wendy+One&display=swap" rel="stylesheet">
-    <link rel="shortcut icon" href="logo.png" type="image/x-icon">
-    <script src="https://maps.googleapis.com/maps/api/js?key=YOUR_API_KEY&libraries=places"></script>
+    <link rel="shortcut icon" href="../img/logo.png" type="image/x-icon">
     <title>PET BOM</title>
 </head>
 <body>
-    <header class="header">
-        <div class="logo">
-            <img src="logo.png" alt="Logo">
-        </div>
-        <div class="search-bar">
-        </div>
-        <div class="icon">
-            <button id="openModalBtn" ><i class="bi bi-list"></i></button> 
-        </div>
-        <!-- O Modal -->
-        <div id="myModal" class="modal">
-            <!-- Conteúdo do Modal -->
-            <div class="modal-content">
-                <span class="close">&times;</span>
-                <h2>MENU</h2>
-                <a href="/PetBomFront/PaginaInicial.html">
+    <div class="container">
+        <header class="header">
+            <div class="logo">
+                <img src="../../PetBomFront/img/logo.png" alt="Logo">
+            </div>
+        </header>
+        <main class="main">
+            <div class="button-container">
+               <a href="../PaginaInicial.html">
                 <button type="button" onclick="VoltarInicio()">Inicio</button>
                 </a>
-                <a href="/PetBomFront/pag_3/petshops.html">
-                <button type="button" onclick="EntrarLoveDog()">PetShops</button>
+                <a href="/PetBomFront/pag_2/LoveDog.html">
+                <button type="button" onclick="EntrarLoveDog()">LoveDog</button>
                 </a>
             </div>
-        </div>
-    </header>
-    <main class="main">
-        <div class="button-container">
-            <a href="/PetBomFront/PaginaInicial.html">
-            <button type="button" onclick="VoltarInicio()">Inicio</button>
-            </a>
-            <a href="/PetBomFront/pag_2/LoveDog.html">
-            <button type="button" onclick="EntrarLoveDog()">LoveDog</button>
-            </a>
-        </div>
-        <br>
-        <div class="image-slider">
-            <img src="slider1.png" alt="Slider Image 1">
-            <img src="slider2.png" alt="Slider Image 2">
-            <img src="slider3.png" alt="Slider Image 3">
-        </div>
-        <br>
-        <br>
-        <div class="two-column-container">
-            <div class="column">
-                <img src="/img/pacote-banho-e-tosa.png" alt="Image 1">
-                <p>Banho & Tosa</p>
-            </div>
-        </div>
-        <br>
-        <br>
-        <div class="sliding-columns">
-            <div class="column">
-                <div class="sliding-images">
-                    <img src="photo1a.png" alt="Photo 1A">
-                    <img src="photo1b.png" alt="Photo 1B">
+            <br>
+            <div class="imagemCachorro">
+                <div class="imagemcachorro">
+                    <img src="cachorroPasseando.png" alt="Imagem 1">
                 </div>
-            </div>
-            <div class="column">
-                <div class="sliding-images">
-                    <a href="./photo1b.png"><img src="./image2.png" alt="Cuidados"></a>
-                    <a href="./photo2a.png"><img src="./photo1a.png" alt="Sol"></a>
-                </div>
-            </div>
-        </div>
-        <br>
-        <a aria-label="Chat on WhatsApp" href="https://wa.me/5514998952668" class="whatsapp-btn">
-            <div class="whatsapp-container">
-              <img alt="Chat on WhatsApp" src="/PetBomFront/Whatsapp.png" class="whatsapp-icon" />
-              <span class="whatsapp-text">Suporte</span>
-            </div>
-          </a>
-        <br>
-        <div class="button-container">
-            <a href="/PetBomFront/CadastrarPetShop.html">
-            <button type="button" onclick="CadastrarPetshop()">Quero cadastrar meu petshop</button>
+            <br>
+            <br>
+            <p class="info">Confira Nossas Parcerias</p>
+            <br>
+            <div class="ladoalado">
+              <div class="div-esquerda">
+                <div class="image-holder">
+                  <a href="https://www.facebook.com/studiopetagudos/">
+                  <img src="../img/image7.png" alt="Imagem 1">
                 </a>
-        </div>
-        <br>
-        <br>
-        <div class="button-container">
-            <a  href="./VerMaisPetShop.html" class="VerMais">Ver Mais</a>
-        </div>
-        <br>
-        <br>
-    </main>
-    <footer class="footer">
-        <div class="footer-columns">
-            <div class="footer-column">
-                <p>Mais informações podem ser encontradas</p>
-                <p>Instagram: @PetBom_Of</p>
-                <p>Facebook: PetBomOficial</p>
+                </div>
+              </div>
+              <div class="div-direita">
+                <div class="image-holder">
+                  <a href="https://www.facebook.com/PetiscaoCenter/videos/petisc%C3%A3o-center-agudos/3255133347897121/?locale=ms_MY">
+                  <img src="../pag_3/photo1b.png" alt="Imagem 2">
+                </a>
+                </div>
+              </div>
             </div>
-            <div class="footer-column">
-                <p>Qualquer duvida entre em contado</p>
-                <p>Whattsap: (11) 1234-5678</p>
-                <p>Telefone: (11) 1234-5678</p>
-                <p>Email: suporte@petbom.com</p>
+            <br>
+
+            <br>
+            <div class="button-container">
+                <a href="/PetBomFront/CadastrarPetShop.html">
+                <button type="button" onclick="CadastrarPetshop()">Quero cadastrar meu petshop</button>
+                </a>
             </div>
-        </div>
-        <div class="footer-info">
-            <p>  Copyright© 2024 PetBom Comércio e Participações S/A - Todos os direitos reservados</p>
-            <p>                     Desenvolvido por Rafaela, Pedro D, Kauã H, Kaua S e Evelin</p>
-        </div>
-    </footer>
-    <script src="petshops.js"></script>
+            <br>
+            <div class="quatrodiv">
+              <div class="div1">
+                <div class="holder">
+                  <a href="../dicas_inverno.html">
+                  <img src="../img/acasalar.png" alt="Image 7">
+                  <p>Cuidados ao acasalar</p>
+                </div>
+              </div>
+              <div class="div2">
+                <div class="holder">
+                  <a href="../dica_acasalamento.html">
+                  <img src="../img/animaisabracando.png">
+                  <p>Cuidados no inverno</p>
+                </div>
+              </div>
+              <div class="div3">
+                <div class="holder">
+                  <a href="/PetBomFront/index_dicas.html">
+                  <img src="photo2a.png">
+                  <p>Cuidados com o seu pet</p>
+                </div>
+              </div>
+              <div class="div4">
+                <div class="holder">
+                  <a href="../index_sol.html">
+                  <img src="../img/sol.jpg">
+                  <p>Cuidados com o sol</p>
+                </div>
+              </div>
+            </div>
+            <br>
+            <br>
+            <div class="button-container">
+                <a  href="/PetBomFront/pag_3/VerMaisPetShop.html" class="VerMais">Ver Petshops Cadastrados</a>
+            </div>
+            <br>
+            <a aria-label="Chat on WhatsApp" href="https://wa.me/5514998952668" class="whatsapp-btn">
+                <div class="whatsapp-container">
+                  <img alt="Chat on WhatsApp" src="../Whatsapp.png" class="whatsapp-icon" />
+                  <span class="whatsapp-text">Suporte</span>
+                </div>
+              </a>
+            <br>
+            <br>
+        </main>
+        <footer class="footer">
+            <div class="footer-info">
+                <p>  Copyright© 2024 PetBom Comércio e Participações S/A - Todos os direitos reservados</p>
+                <p>                     Desenvolvido por Rafaela, Pedro D, Kauã H, Kaua S e Evelin</p>
+            </div>
+        </footer>
+    </div>
 </body>
+<script src="petshops.js"></script>
 </html>

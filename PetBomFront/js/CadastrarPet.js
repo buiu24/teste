@@ -5,26 +5,26 @@ document.addEventListener('DOMContentLoaded', function() {
         window.location.href = 'Cadastrar.html';
     }
 });
-
+ 
 document.getElementById("petForm").addEventListener("submit", async function(event) {
     event.preventDefault();
-
+ 
     const usuarioId = localStorage.getItem("IdUsuario");
     const nomeDoPet = document.getElementById("nomeDoPet").value;
     const especie = document.getElementById("especie").value;
     const raca = document.getElementById("raca").value;
     const idadeDoPet = document.getElementById("idadeDoPet").value;
     const imagem = document.getElementById("imagem").files[0];
-    
+   
     const novoPet = {
         usuarioId : usuarioId,
         nomeDoPet : nomeDoPet,
-        especie : especie, 
+        especie : especie,
         raca : raca,
         idadeDoPet : idadeDoPet
     };
-    
-    
+   
+   
     try {
         const response = await fetch('http://localhost:5195/api/Pet', {
             method: 'POST',
@@ -33,10 +33,19 @@ document.getElementById("petForm").addEventListener("submit", async function(eve
             },
             body: JSON.stringify (novoPet)
         });
-        
+       
         if (response.ok) {
-            alert("Pet cadastrado com sucesso!");
-            // Limpar o formulário
+            Toastify({
+                text: "Pet Cadastrado com Sucesso!",
+                duration: 3000,
+                close: true,
+                gravity: "top", // `top` ou `bottom`
+                position: "center", // `left`, `center` ou `right`
+                stopOnFocus: true, // Impede o fechamento ao passar o mouse
+                style: {
+                  background: "#78E7FF",
+                },
+            }).showToast();
             document.getElementById("petForm").reset();
             document.getElementById("successMessage").style.display = "block";
             setTimeout(() => {
@@ -48,24 +57,43 @@ document.getElementById("petForm").addEventListener("submit", async function(eve
         }
             const novoPetJson = await response.json();
             const PetId = novoPetJson.id;
-
+ 
             if (!imagem) {
-                alert("Por favor, selecione uma imagem para o pet.");
+                Toastify({
+                    text: "Por favor, Selecione uma imagem do seu Pet!",
+                    duration: 3000,
+                    close: true,
+                    gravity: "top", // `top` ou `bottom`
+                    position: "center", // `left`, `center` ou `right`
+                    stopOnFocus: true, // Impede o fechamento ao passar o mouse
+                    style: {
+                      background: "#ffeb3b",
+                    },
+                }).showToast();
                 return;
             }
-        
+       
              const formData = new FormData();
              formData.append('file', imagem);
-        
+       
             const responseImage = await fetch(`http://localhost:5195/api/Pet/${PetId}/upload`, {
                 method: 'POST',
-                body : formData 
+                body : formData
             });
-        
+       
             if(responseImage.ok)
                 {
-                    alert('Imagem postada com Sucesso!.');
-                }
+                    Toastify({
+                        text: "A imagem do Pet foi Postada com Sucesso!",
+                        duration: 3000,
+                        close: true,
+                        gravity: "top", // `top` ou `bottom`
+                        position: "center", // `left`, `center` ou `right`
+                        stopOnFocus: true, // Impede o fechamento ao passar o mouse
+                        style: {
+                          background: "#78E7FF",
+                        },
+                    }).showToast();                }
                 else {
                     alert('Erro no upload da imagem!')
                 }

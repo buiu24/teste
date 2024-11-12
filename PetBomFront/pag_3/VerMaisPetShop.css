@@ -4,109 +4,100 @@ body {
     flex-direction: column;
     min-height: 100vh;
     font-family: "Sofia Sans", sans-serif;
+    background-color: #f0f8ff;
+    color: #333;
 }
-
+ 
 .header {
     display: flex;
     justify-content: space-between;
     align-items: center;
     padding: 10px 20px;
     background-color: #FFFA76;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
 }
-
+ 
 .logo img {
     height: 150px;
 }
-
-.search-bar {
-    flex-grow: 1;
-    max-width: 1000px;
-    margin: 0 20px;
-}
-
-.search-bar input {
-    font-size: 20px;
-    width: 100%;
-    padding: 8px;
-    background-color: #D9D9D9;
-    border: none;
-    border-radius: 25px;
-}
-
-.icon button {
-    color: #78E7FF;
-    height: 100px;
-    width: 100px;
-    font-size: 40px;
-    border: none;
-    background: none;
-    cursor: pointer;
-}
-
+ 
 .main {
     display: flex;
     flex-direction: column;
     align-items: center;
     margin-top: 20px;
 }
-
+ 
+h1 {
+    font-size: 2.5rem;
+    color: #78E7FF;
+    margin-bottom: 20px;
+}
+ 
+/* Barra de pesquisa */
+#pesquisaInput {
+    width: 80%;
+    max-width: 600px;
+    padding: 10px 15px;
+    font-size: 16px;
+    border: 2px solid #78E7FF;
+    border-radius: 25px;
+    margin-bottom: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease;
+}
+ 
+#pesquisaInput:focus {
+    border-color: #4faac9;
+    outline: none;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+}
+ 
+/* Lista dos PetShops em duas colunas */
 #listaPetShop {
     list-style-type: none;
     padding: 0;
     width: 90%;
     margin: 0 auto;
+    display: flex;
+    flex-wrap: wrap; /* Permite que os itens quebrem a linha se necessário */
+    justify-content: center; /* Centraliza os itens */
 }
-
+ 
 .petshop {
     display: flex;
     flex-direction: column;
-    align-items: flex-start;
-    margin-bottom: 20px;
+    align-items: center;
+    width: 25%; /* Ajuste a largura para 30% para que três itens caibam lado a lado */
+    margin: 10px; /* Espaçamento entre os itens */
     border: 1px solid #ccc;
-    border-radius: 8px;
+    border-radius: 15px;
     padding: 20px;
-    background-color: #f9f9f9;
+    background-color: #fff;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-}
+    transition: transform 0.3s ease;
 
+}
+ 
+.petshop:hover {
+    transform: scale(1.02);
+}
+ 
 .petshop img {
-    width: 200px;
-    height: 200px;
+    width: 150px;
+    height: 150px;
     object-fit: cover;
     margin-bottom: 20px;
     border: 2px solid #78E7FF;
-    border-radius: 8px;
+    border-radius: 50%;
 }
-
-.petshop table {
-    width: 100%;
-    border-collapse: collapse;
-    font-family: "Spline Sans Mono", monospace;
+ 
+.petshop strong {
+    display: block;
+    margin: 5px 0;
+    color: #333;
 }
-
-.petshop th, .petshop td {
-    padding: 10px;
-    text-align: left;
-}
-
-.petshop th {
-    color: rgb(66, 219, 253);
-    border-bottom: 2px solid #ddd;
-    font-weight: bold;
-    text-transform: uppercase;
-    letter-spacing: 1px;
-}
-
-.petshop td {
-    background-color: #f2f2f2;
-    color: #0b13f9;
-    border-bottom: 1px solid #ddd;
-}
-
-.petshop tr:last-child td {
-    border-bottom: none;
-}
-
+ 
 .petshop button {
     padding: 10px 20px;
     font-size: 16px;
@@ -117,55 +108,105 @@ body {
     cursor: pointer;
     transition: background-color 0.3s ease;
 }
-
+ 
 .petshop button:hover {
     background-color: #4faac9;
 }
+ 
+button.Voltar {
+    position: absolute;
+    left: 20px;
+    background-color: transparent; /* Cor de fundo suave */
+    color: #4ed5f3; /* Cor do texto */
+    border: none; /* Remover borda padrão */
+    padding: 10px 20px; /* Espaçamento interno */
+    border-radius: 5px; /* Bordas arredondadas */
+    cursor: pointer; /* Mudança de cursor ao passar o mouse */
+    display: inline-flex; /* Para alinhar o ícone e o texto juntos */
+    transition: background-color 0.3s ease, box-shadow 0.3s ease; /* Transições suaves */
+    font-size: 26px; /* Tamanho da fonte */
+}
 
+button.Voltar i {
+    font-size: 26px; /* Tamanho do ícone */
+    transition: transform 0.3s ease; /* Animação no ícone */
+}
+
+button.Voltar:hover {
+    background-color: #edecec; /* Cor ao passar o mouse */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Sombra ao passar o mouse */
+}
+
+button.Voltar:active {
+    background-color: #d0d0d0; /* Cor ao clicar */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2); /* Sombra mais suave ao clicar */
+}
+
+button.Voltar:hover i {
+    transform: translateX(-3px); /* Animação no ícone ao passar o mouse */
+}
+ 
+/* Estilos do modal */
+.modal {
+    display: none; /* Inicialmente oculto */
+    position: fixed; /* Fixa na tela */
+    z-index: 1; /* Mantém o modal acima dos outros elementos */
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5); /* Fundo com leve transparência */
+    display: flex; /* Alinha o conteúdo ao centro */
+    justify-content: center; /* Centraliza horizontalmente */
+    align-items: center; /* Centraliza verticalmente */
+}
+
+/* Conteúdo do modal */
+.modal-content {
+    background-color: #ffffff; /* Fundo branco */
+    margin: 15% auto; /* Margem superior */
+    padding: 20px; /* Espaçamento interno */
+    border-radius: 8px; /* Bordas arredondadas */
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2); /* Sombra leve */
+    width: 90%; /* Largura do modal */
+    max-width: 500px; /* Largura máxima */
+}
+
+/* Estilo do botão de fechar */
+.close {
+    color: #aaa; /* Cor do texto do botão de fechar */
+    float: right; /* Posiciona o botão à direita */
+    font-size: 24px; /* Tamanho da fonte */
+    font-weight: bold; /* Negrito */
+    cursor: pointer; /* Cursor em formato de ponteiro */
+}
+
+.close:hover {
+    color: #000; /* Cor ao passar o mouse */
+}
+
+/* Estilo do conteúdo do modal */
+h2 {
+    margin: 0; /* Remove margens do título */
+    font-size: 20px; /* Tamanho do título */
+    color: #333; /* Cor do texto do título */
+}
+
+p {
+    font-size: 14px; /* Tamanho do texto */
+    color: #555; /* Cor do texto */
+}
+
+/* Link do WhatsApp */
 a {
-    color: #3000f0;
-    text-decoration: none;
-    transition: all 0.5s ease;
+    color: #4ed5f3; /* Cor do link do WhatsApp */
+    text-decoration: none; /* Remove sublinhado */
 }
 
 a:hover {
-    transform: scale(1.1); 
+    text-decoration: underline; /* Sublinha ao passar o mouse */
 }
-.whatsapp-btn {
-    position: fixed;
-    bottom: 15px; /* Distância da parte inferior da página */
-    right: 15px;  /* Distância da parte direita da página */
-    z-index: 1000; /* Garante que o botão fique por cima de outros elementos */
-    background-color: #49D2F0; /* Cor de fundo azul */
-    color: #ffffff; /* Cor do texto */
-    font-family: Arial, sans-serif;
-    font-weight: bold;
-    border: none; /* Remove a borda */
-    border-radius: 20px; /* Bordas arredondadas */
-    padding: 5px 10px; /* Espaçamento menor dentro do botão */
-    display: flex;
-    align-items: center;
-    text-decoration: none; /* Remove o sublinhado do link */
-    cursor: pointer;
-    transition: background-color 0.3s ease; /* Transição suave ao passar o mouse */
-  }
 
-  .whatsapp-btn:hover {
-    background-color: #37A9C1; /* Mudança de cor no hover para um azul mais escuro */
-  }
-
-  .whatsapp-container {
-    display: flex;
-    align-items: center;
-  }
-
-  .whatsapp-icon {
-    width: 20px; /* Ícone de WhatsApp ajustado para 20px */
-    height: 20px;
-    margin-right: 5px;
-  }
-
-  .whatsapp-text {
-    font-size: 10px; /* Texto pequeno */
-    color: #ffffff; /* Cor branca para o texto */
-  }
+#detalhesModal {
+    display: none; 
+}

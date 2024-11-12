@@ -1,9 +1,9 @@
 <!DOCTYPE html>
-<html lang="pt">
+<html lang="pt-BR">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="BorderCollie.css">
+    <link rel="stylesheet" href="BorderCollie.css">  
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -13,84 +13,71 @@
     <link href="https://fonts.googleapis.com/css2?family=Sofia+Sans:ital,wght@0,1..1000;1,1..1000&family=Spline+Sans+Mono:ital,wght@0,300..700;1,300..700&display=swap" rel="stylesheet">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css?family=Montserrat:300,400,500,600,700&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Sofia+Sans:ital,wght@0,1..1000;1,1..1000&family=Spline+Sans+Mono:ital,wght@0,300..700;1,300..700&family=Wendy+One&display=swap" rel="stylesheet">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
-    <link rel="shortcut icon" href="logo.png" type="image/x-icon">
-    <script src="https://maps.googleapis.com/maps/api/js?key=YOUR_API_KEY&libraries=places"></script>
+    <link rel="shortcut icon" href="../img/logo.png" type="image/x-icon">
     <title>PET BOM</title>
 </head>
 <body>
-    <header class="header">
-        <div class="logo">
-            <img src="logo.png" alt="Logo">
-        </div>
-        <div class="search-bar">
-    </div>
-    </header>
-    <main class="main">
-        <div class="button-container">
-            <a href="/PetBomFront/PaginaInicial.html">
-            <button onclick="Voltar()">Voltar</button>
+    <div class="container">
+        <header class="header">
+            <div class="logo">
+                <img src="../img/logo.png" alt="Logo">
+            </div>
+        </header>
+        <main class="main">
+            <div class="button-container">
+                <button onclick="history.back()">Voltar</button>
             </a>
-            </div>
+                </div>
+                <br>
+                <div class="image-slider">
+                    <img src="slider1.png" alt="Slider Image 1">
+                </div>
+                <div class="centro">
+                    <h1 class="titulo-com-borda">Border Collie</h1>
+                    <p>O cachorro Border Collie é considerado um dos mais inteligentes e leais. De porte médio e popular pela aparência, ele tem muita energia e está sempre apto para praticar alguma atividade, por isso, tem conquistado cada vez mais tutores que buscam por um companheiro para rotinas mais agitadas.
+                        <br>
+                        Por estar sempre tão disposto, o Border Collie tende a procurar novos desafios, o que ajuda muito nos programas de adestramento. Por outro lado, ele pode ficar entediado facilmente quando essas características não são estimuladas. Esse cachorro também se adapta muito bem às rotinas de trabalho e é um ótimo cão de guarda, já que está sempre em alerta com a chegada de estranhos.
+                        <br>
+                        Por ter como característica a necessidade do estímulo físico e mental, uma rotina de exercícios é fundamental para a qualidade de vida do Border Collie, que adora brincadeiras educativas e jogos de agilidade, como lançamentos de bolinhas e de disco. O importante é que as atividades possam consumir toda a energia que ele carrega, ao mesmo tempo que proporcionam novos aprendizados.
+                        <br>
+                        Além das brincadeiras mais comuns, as técnicas de adestramento funcionam muito bem. Levar o filhote de Border Collie para programas do tipo garante um desenvolvimento mais saudável e ativo, fora o impacto positivo na relação com os tutores. As atividades do tipo podem continuar sendo feitas ao longo da vida do animal, o que contribui para que ele não fique tímido ou agressivo.
+                    </p>
+                </div>
+                <br>
+                <a aria-label="Chat on WhatsApp" href="https://wa.me/5514998952668" class="whatsapp-btn">
+                    <div class="whatsapp-container">
+                      <img alt="Chat on WhatsApp" src="Whatsapp.png" class="whatsapp-icon" />
+                      <span class="whatsapp-text">Suporte</span>
+                    </div>
+                  </a>
+                <br>
+                <div class="galeria">
+                    <img src="imagem1.png" alt="Imagem 1">
+                    <img src="imagem2.png" alt="Imagem 2">
+                    <img src="imagem3.png" alt="Imagem 3">
+                    <img src="imagem4.png" alt="Imagem 4">
+                </div>
             <br>
-            <div class="image-slider">
-                <img src="slider1.png" alt="Slider Image 1">
-            </div>
-            <div class="centro">
-                <h1 class="titulo-com-borda">Border Collie</h1>
-                <br>
-                <p>O cachorro Border Collie é considerado um dos mais inteligentes e leais. De porte médio e popular pela aparência, ele tem muita energia e está sempre apto para praticar alguma atividade, por isso, tem conquistado cada vez mais tutores que buscam por um companheiro para rotinas mais agitadas.
-                <br>
-                Por estar sempre tão disposto, o Border Collie tende a procurar novos desafios, o que ajuda muito nos programas de adestramento. Por outro lado, ele pode ficar entediado facilmente quando essas características não são estimuladas. Esse cachorro também se adapta muito bem às rotinas de trabalho e é um ótimo cão de guarda, já que está sempre em alerta com a chegada de estranhos.
-                <br>
-                Por ter como característica a necessidade do estímulo físico e mental, uma rotina de exercícios é fundamental para a qualidade de vida do Border Collie, que adora brincadeiras educativas e jogos de agilidade, como lançamentos de bolinhas e de disco. O importante é que as atividades possam consumir toda a energia que ele carrega, ao mesmo tempo que proporcionam novos aprendizados.
-                <br>
-                Além das brincadeiras mais comuns, as técnicas de adestramento funcionam muito bem. Levar o filhote de Border Collie para programas do tipo garante um desenvolvimento mais saudável e ativo, fora o impacto positivo na relação com os tutores. As atividades do tipo podem continuar sendo feitas ao longo da vida do animal, o que contribui para que ele não fique tímido ou agressivo.
-                </p>
-            </div>
+            <br>
+
+            <a aria-label="Chat on WhatsApp" href="https://wa.me/5514998952668" class="whatsapp-btn">
+                <div class="whatsapp-container">
+                  <img alt="Chat on WhatsApp" src="Whatsapp.png" class="whatsapp-icon" />
+                  <span class="whatsapp-text">Suporte</span>
+                </div>
+              </a>
             <br>
             <br>
-            <div class="galeria">
-                <img src="imagem1.png" alt="Imagem 1">
-                <img src="imagem2.png" alt="Imagem 2">
-                <img src="imagem3.png" alt="Imagem 3">
-                <img src="imagem4.png" alt="Imagem 4">
+        </main>
+        <footer class="footer">
+            <div class="footer-info">
+                <p>  Copyright© 2024 PetBom Comércio e Participações S/A - Todos os direitos reservados</p>
+                <p>                     Desenvolvido por Rafaela, Pedro D, Kauã H, Kaua S e Evelin</p>
             </div>
-        <br>
-        <br>
-        <a aria-label="Chat on WhatsApp" href="https://wa.me/5514998952668" class="whatsapp-btn">
-            <div class="whatsapp-container">
-              <img alt="Chat on WhatsApp" src="Whatsapp.png" class="whatsapp-icon" />
-              <span class="whatsapp-text">Suporte</span>
-            </div>
-          </a>
-        <br>
-        <br>
-    </main>
-    <footer class="footer">
-        <div class="footer-columns">
-            <div class="footer-column">
-                <p>Mais informações podem ser encontradas</p>
-                <p>Instagram: @PetBom_Of</p>
-                <p>Facebook: PetBomOficial</p>
-                <p>Formas de Pagamento</p>
-                <img src="rodape.png" alt="Footer Image">
-            </div>
-            <div class="footer-column">
-                <p>Qualquer duvida entre em contado</p>
-                <p>Whattsap: (11) 1234-5678</p>
-                <p>Telefone: (11) 1234-5678</p>
-                <p>Email: suporte@petbom.com</p>
-            </div>
-        </div>
-        <div class="footer-info">
-            <p>  Copyright© 2024 PetBom Comércio e Participações S/A - Todos os direitos reservados</p>
-            <p>                     Desenvolvido por Rafaela, Pedro D, Kauã H, Kaua S e Evelin</p>
-        </div>
-    </footer>
-    <script src="BorderCollie.js"></script>
+        </footer>
+    </div>
 </body>
+<script src="BorderCollie.js"></script>
 </html>

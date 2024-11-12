@@ -1,0 +1,238 @@
+body{
+    margin: 15px;
+    padding: 0;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-image: url('../img/fundo_principal.png');
+}
+.container {
+    background-color: rgba(255, 255, 255); 
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    max-width: 1000px; /* Largura maior */
+    width: 100%; /* Para garantir que a largura total seja usada até o limite do max-width */
+    text-align: center;
+}
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+    background-color: #FFFA76;
+    border-radius: 10px;
+}
+.logo img {
+    height: 100px;
+}
+.search-bar {
+    flex-grow: 1;
+    max-width: 1000px;
+    margin: 0 20px;
+}
+.search-bar input {
+    font-size: 16px;
+    text-align: center;
+    width: 100%;
+    padding: 8px;
+    background-color: #fbfbfb;
+    border: none;
+    border-radius: 25px;
+    font-family: "Sofia Sans", sans-serif;
+}
+.icon button {
+    color: #78E7FF;
+    height: 50px;
+    width: 50px;
+    font-size: 30px;
+    border: none;
+    outline: none;
+    background: none;
+    cursor: pointer;
+}
+.main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 20px;
+}
+.button-container {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+}
+
+.button-container button {
+    margin: 25px;
+    padding: 16px 70px;
+    font-size: 15px;
+    border: none;
+    border-radius: 25px;
+    background-color: #78E7FF;
+    color: white;
+    cursor: pointer;
+    letter-spacing: 8px;
+    transition: 1.0s;
+    text-transform: uppercase;
+    text-decoration: none;
+}
+
+.button-container button:hover {
+    background: #FFEE96;
+    color: #49D2F0;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    border-radius: 5px;
+    box-shadow: 0 0 5px #49D2F0,
+                0 0 20px #49D2F0,
+                0 0 40px #49D2F0,
+                0 0 70px #49D2F0;
+}
+.image-slider {
+    width: 90%;
+    height: 450px; /* Ajuste conforme necessário */
+    overflow: hidden;
+    border: none;
+    border-radius: 10px;
+}
+.image-slider img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+.titulo-com-borda {
+    font-size: 4em; /* Ajuste o tamanho da fonte conforme necessário */
+    color: #00D1FF; /* Cor do texto */
+    text-align: center; /* Centraliza o texto dentro do elemento */
+    text-shadow: 
+        -3px -1px 0 #FFEE96,  
+         3px -1px 0 #FFEE96,
+        -3px  1px 0 #FFEE96,
+         3px  1px 0 #FFEE96; /* Cria o contorno ao redor das letras */
+    font-family: "Wendy One", sans-serif;
+}
+.centro{
+    margin: auto 55px;
+}
+.centro p{
+    font-family: "Montserrat", sans-serif;
+    font-size: 22px;
+    text-align: justify;
+}
+.galeria {
+    display: flex;
+    gap: 50px; /* Espaçamento aumentado entre as imagens */
+}
+.galeria img {
+    width: 200px; /* Define a largura das imagens */
+    height: 200px; /* Define a altura das imagens */
+    object-fit: cover; /* Ajusta a imagem para cobrir totalmente a área definida */
+}
+.footer {
+    padding: 3px;
+    background-color: #FFFA76;
+    font-family: "Sofia Sans", sans-serif;
+    font-size: 5px;
+}
+.footer-info {
+    text-align: center;
+    padding: 5px;
+    border-radius: 44px;
+    font-size: 10px;
+    color: #000000;
+}
+/* Estilos para o Modal */
+.modal {
+    display: none; /* Oculto por padrão */
+    position: fixed; /* Fixo no fundo */
+    z-index: 1; /* Fica em cima */
+    left: 0;
+    top: 0;
+    width: 100%; /* Largura total */
+    height: 100%; /* Altura total */
+    overflow: auto; /* Habilita rolagem se necessário */
+    background-color: rgb(0,0,0); /* Fundo preto com opacidade */
+    background-color: rgba(0,0,0,0.4); /* Preto com opacidade */
+}
+
+/* Conteúdo do Modal */
+.modal-content {
+    background-color: #fefefe;
+    margin: 15% auto; /* 15% do topo e centralizado */
+    padding: 20px;
+    border: 1px solid #888;
+    width: 80%; /* Pode ser ajustado conforme necessário */
+    text-align: center;
+    font-family: "Wendy One", sans-serif;
+    font-size: 20px;
+    color: #4C4C4C;
+}
+
+/* Botão para fechar o modal */
+.close {
+    color: #aaa;
+    float: right;
+    font-size: 50px;
+    font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+/* Estilos para os botões dentro do modal */
+.modal-button {
+    display: block; /* Faz com que os botões sejam exibidos como blocos */
+    width: 100%; /* Faz com que os botões ocupem toda a largura disponível */
+    margin: 10px 0; /* Margem superior e inferior para espaçamento */
+    padding: 10px;
+    font-family: "Sofia Sans", sans-serif;
+    font-size: 20px;
+    cursor: pointer;
+    border-radius: 50px;
+    border: none;
+    background-color: #78E7FF;
+    color:#ffffff
+}
+.whatsapp-btn {
+    position: fixed;
+    bottom: 15px; /* Distância da parte inferior da página */
+    right: 15px;  /* Distância da parte direita da página */
+    z-index: 1000; /* Garante que o botão fique por cima de outros elementos */
+    background-color: #49D2F0; /* Cor de fundo azul */
+    color: #ffffff; /* Cor do texto */
+    font-family: Arial, sans-serif;
+    font-weight: bold;
+    border: none; /* Remove a borda */
+    border-radius: 20px; /* Bordas arredondadas */
+    padding: 5px 10px; /* Espaçamento menor dentro do botão */
+    display: flex;
+    align-items: center;
+    text-decoration: none; /* Remove o sublinhado do link */
+    cursor: pointer;
+    transition: background-color 0.3s ease; /* Transição suave ao passar o mouse */
+  }
+
+  .whatsapp-btn:hover {
+    background-color: #37A9C1; /* Mudança de cor no hover para um azul mais escuro */
+  }
+
+  .whatsapp-container {
+    display: flex;
+    align-items: center;
+  }
+
+  .whatsapp-icon {
+    width: 20px; /* Ícone de WhatsApp ajustado para 20px */
+    height: 20px;
+    margin-right: 5px;
+  }
+
+  .whatsapp-text {
+    font-size: 10px; /* Texto pequeno */
+    color: #ffffff; /* Cor branca para o texto */
+  }

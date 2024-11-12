@@ -1,15 +1,25 @@
 document.getElementById("loginForm").addEventListener("submit", async function(event) {
     event.preventDefault();
-    
+   
     const email = document.getElementById('email').value;
     const senha = document.getElementById('senha').value;
     const loginError = document.getElementById('loginError');
-
+ 
     if (email === '' || senha === '') {
-        alert("Preencha todos os campos");
+        Toastify({
+            text: "Preencha todos os Campos!",
+            duration: 3000,
+            close: true,
+            gravity: "top", // `top` ou `bottom`
+            position: "center", // `left`, `center` ou `right`
+            stopOnFocus: true, // Impede o fechamento ao passar o mouse
+            style: {
+              background: "#ffeb3b",
+            },
+        }).showToast();
         return;
     }
-
+ 
     try {
         const response = await fetch('http://localhost:5195/api/Autenticacao/login', {
             method: 'POST',
@@ -18,21 +28,49 @@ document.getElementById("loginForm").addEventListener("submit", async function(e
             },
             body: JSON.stringify({ email: email, senha: senha })
         });
-        
+       
         const responseBody = await response.json();
-
+ 
         if (response.ok) {
             loginError.style.display = 'none';
-            alert('Login bem-sucedido!');
-            window.location.href = "http://127.0.0.1:5500/PaginaInicial.html";
+            Toastify({
+                text: "Logado!",
+                duration: 3000,
+                close: true,
+                gravity: "top", // `top` ou `bottom`
+                position: "center", // `left`, `center` ou `right`
+                stopOnFocus: true, // Impede o fechamento ao passar o mouse
+                style: {
+                  background: "#78E7FF",
+                },
+            }).showToast();
+            window.location.href = "http://127.0.0.1:5500/PetBomFront/PaginaInicial.html";
         } else {
-            console.error('Erro ao fazer login:', responseBody);
-            loginError.style.display = 'inline';
-            loginError.textContent = 'Erro ao fazer login: ' + responseBody.title;
+            Toastify({
+                text: "Este Usuário não existe! clique em criar uma conta ;D",
+                duration: 3000,
+                close: true,
+                gravity: "top", // `top` ou `bottom`
+                position: "center", // `left`, `center` ou `right`
+                stopOnFocus: true, // Impede o fechamento ao passar o mouse
+                style: {
+                  background: "#78E7FF",
+                },
+            }).showToast();
+            
         }
     } catch (error) {
-        console.error('Erro ao fazer login:', error);
-        loginError.style.display = 'inline';
-        loginError.textContent = 'Erro ao fazer login: ' + error;
+        Toastify({
+            text: "Erro ao Fazer o Login, Verifique sua Internet!",
+            duration: 3000,
+            close: true,
+            gravity: "top", // `top` ou `bottom`
+            position: "center", // `left`, `center` ou `right`
+            stopOnFocus: true, // Impede o fechamento ao passar o mouse
+            style: {
+              background: "#78E7FF",
+            },
+        }).showToast();
     }
 });
+ 

@@ -3,18 +3,35 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Alimentação do Seu Pet</title>
-    <link rel="stylesheet" href="Css/css_dicas.css">
+    <link rel="stylesheet" href="./Css/css_dicas.css">  
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Sofia+Sans:ital,wght@0,1..1000;1,1..1000&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Sofia+Sans:ital,wght@0,1..1000;1,1..1000&family=Spline+Sans+Mono:ital,wght@0,300..700;1,300..700&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Baloo+Paaji+2:wght@400..800&display=swap" rel="stylesheet">       
+    <link href="https://fonts.googleapis.com/css?family=Montserrat:300,400,500,600,700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Sofia+Sans:ital,wght@0,1..1000;1,1..1000&family=Spline+Sans+Mono:ital,wght@0,300..700;1,300..700&family=Wendy+One&display=swap" rel="stylesheet">
+    <link rel="shortcut icon" href="./img/logo.png" type="image/x-icon">
+    <title>PET BOM</title>
 </head>
 <body>
-    <div class="logo_amarela">
-        <header>
-            <div class="imagem_logo">
+    <div class="container">
+        <header class="header">
+            <div class="logo">
+                <img src="./img/logo.png" alt="Logo">
             </div>
         </header>
-    </div>
-    <div class="textos">
-        <main>
+        <main class="main"> 
+            <div class="button-container">
+                <button onclick="history.back()">Voltar</button>
+                </a>
+            </div>
             <section class="content">
                 <div class="imagem_cuidados">
                     <img src="img/cuidados.png" alt="Dicas e cuidados sobre a alimentação do seu PET">
@@ -90,8 +107,22 @@
                     </ul>
                 </div>
             </section>
+            <br>
+            <br>
+            <a aria-label="Chat on WhatsApp" href="https://wa.me/5514998952668" class="whatsapp-btn">
+                <div class="whatsapp-container">
+                  <img alt="Chat on WhatsApp" src="Whatsapp.png" class="whatsapp-icon" />
+                  <span class="whatsapp-text">Suporte</span>
+                </div>
+              </a>
         </main>
+        <footer class="footer">
+            <div class="footer-info">
+                <p>  Copyright© 2024 PetBom Comércio e Participações S/A - Todos os direitos reservados</p>
+                <p>                     Desenvolvido por Rafaela, Pedro D, Kauã H, Kaua S e Evelin</p>
+            </div>
+        </footer>
     </div>
-    <script src="js/script.js"></script>
 </body>
+<script src="./js/script.js"></script>
 </html>

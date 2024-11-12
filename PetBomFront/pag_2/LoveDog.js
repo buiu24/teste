@@ -1,43 +1,84 @@
-let currentIndex = 0;
-        function showNextImage() {
-            const images = document.querySelectorAll('.image-slider img');
-            images[currentIndex].style.display = 'none';
-            currentIndex = (currentIndex + 1) % images.length;
-            images[currentIndex].style.display = 'block';
-        }
-        document.addEventListener('DOMContentLoaded', () => {
-            const images = document.querySelectorAll('.image-slider img');
-            images.forEach((img, index) => {
-                if (index !== 0) img.style.display = 'none';
-            });
-            setInterval(showNextImage, 10000); // Troca a cada 10 segundos
-        });
-// Obtém o modal
-var modal = document.getElementById("myModal");
+let slideIndex = 1;
+showSlides(slideIndex);
 
-// Obtém o botão que abre o modal
-var btn = document.getElementById("openModalBtn");
+function plusSlides(n) {
+  showSlides(slideIndex += n);
+}
 
-// Obtém o elemento <span> que fecha o modal
+function currentSlide(n) {
+  showSlides(slideIndex = n);
+}
+
+function showSlides(n) {
+  let i;
+  let slides = document.getElementsByClassName("slide");
+  let dots = document.getElementsByClassName("dot");
+  if (n > slides.length) {
+    slideIndex = 1;
+  }
+  if (n < 1) {
+    slideIndex = slides.length;
+  }
+  for (i = 0; i < slides.length; i++) {
+    slides[i].style.display = "none";
+  }
+  for (i = 0; i < dots.length; i++) {
+    dots[i].className = dots[i].className.replace(" active", "");
+  }
+  slides[slideIndex - 1].style.display = "block";
+  dots[slideIndex - 1].className += " active";
+}
+
+// Adiciona um timer para trocar as imagens a cada 5 segundos
+setInterval(function() {
+  plusSlides(1);
+}, 5000);
+
+document.addEventListener('DOMContentLoaded', () => {
+    const botao = document.getElementById('LoveDog');
+    botao.addEventListener('click', () => {
+        window.location.href = '../pag_2/index.html';
+    });
+});
+
+// menu
+const menuButton = document.querySelector('.menu-button');
+const modal = document.querySelector('.modal');
+const menu = document.querySelector('.menu');
+
+// Adiciona evento de click ao botão do menu
+menuButton.addEventListener('click', () => {
+  modal.style.display = 'block';
+  modal.style.overflowX = 'hidden'; // Adiciona essa linha para remover o overflow-x
+  menu.classList.add('active');
+});
+
+// Adiciona evento de click ao modal
+modal.addEventListener('click', (e) => {
+  if (e.target === modal) {
+    modal.style.display = 'none';
+    menu.classList.remove('active');
+  }
+});
+
+// Adiciona evento de click ao botão que abre o modal
+menuButton.onclick = function() {
+  modal.style.display = "block";
+  modal.style.overflowX = 'hidden'; // Adiciona essa linha para remover o overflow-x
+}
+
+// Adiciona evento de click ao elemento <span> que fecha o modal
 var span = document.getElementsByClassName("close")[0];
-
-// Quando o usuário clicar no botão, abre o modal 
-btn.onclick = function() {
-    modal.style.display = "block";
-}
-
-// Quando o usuário clicar no <span> (x), fecha o modal
 span.onclick = function() {
-    modal.style.display = "none";
+  modal.style.display = "none";
 }
 
-// Quando o usuário clicar fora do modal, fecha o modal
+// Adiciona evento de click fora do modal
 window.onclick = function(event) {
-    if (event.target == modal) {
-        modal.style.display = "none";
-    }
+  if (event.target == modal) {
+    modal.style.display = "none";
+  }
 }
-
 
 function VoltarInicio() {
     console.log("Teste")
@@ -62,6 +103,3 @@ function CadastrarPet() {
 function ParticiparLove() {
     window.location.href = ("http://127.0.0.1:5500/CadastrarPet.html")
 }
-
-
-

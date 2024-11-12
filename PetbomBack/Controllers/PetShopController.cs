@@ -49,6 +49,12 @@ namespace PetBomBack.Controllers
             {
                 return BadRequest("Usuário não encontrado. O PetShop deve estar associado a um usuário existente.");
             }
+            
+             var user = _context.PetShop.FirstOrDefault(u => u.Contato == petshop.Contato);
+            if (user != null)
+            {
+                return Conflict("Um outro PetShop já está usando esse Email");
+            }
 
             petshop.Usuarios = usuarioExistente;
 

@@ -1,9 +1,20 @@
-
-body {
-    margin: 0;
+body{
+    margin: 15px;
+    padding: 0;
+    height: 100%;
     display: flex;
-    flex-direction: column;
-    min-height: 100vh;
+    justify-content: center;
+    align-items: center;
+    background-image: url('../img/fundo_principal.png');
+}
+.container {
+    background-color: rgba(255, 255, 255);
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    max-width: 1000px; /* Largura maior */
+    width: 100%; /* Para garantir que a largura total seja usada até o limite do max-width */
+    text-align: center;
 }
 .header {
     display: flex;
@@ -11,6 +22,7 @@ body {
     align-items: center;
     padding: 10px 20px;
     background-color: #FFFA76;
+    border-radius: 10px;
 }
 .logo img {
     height: 100px;
@@ -22,9 +34,10 @@ body {
 }
 .search-bar input {
     font-size: 16px;
+    text-align: center;
     width: 100%;
     padding: 8px;
-    background-color: #D9D9D9;
+    background-color: #fbfbfb;
     border: none;
     border-radius: 25px;
     font-family: "Sofia Sans", sans-serif;
@@ -45,25 +58,48 @@ body {
     align-items: center;
     margin-top: 20px;
 }
-.image-slider {
-    width: 90%;
-    height: 540px;
+.slider-container {
+    max-width: 1000px;
+    position: relative;
+    margin: auto;
+  }
+ 
+  .slide {
+    display: none;
+    width: 900px;
+    height: 400px;
     overflow: hidden;
-    border: 2px solid #ccc;
-    border-radius: 4px;
+    border: none;
+    border-radius: 15px;
     margin-bottom: 20px;
-}
-.image-slider img {
+  }
+  .slider img {
     width: 100%;
     height: 100%;
     object-fit: cover;
 }
+ 
+  .dot {
+    cursor: pointer;
+    height: 15px;
+    width: 15px;
+    margin: 0 2px;
+    background-color: #49D2F0;
+    border-radius: 50%;
+    display: inline-block;
+    transition: background-color 0.6s ease;
+  }
+ 
+  .active, .dot:hover {
+    background-color: #16a3c3;
+  }
+ 
 .button-container {
     display: flex;
     justify-content: center;
     width: 100%;
 }
-
+ 
 .button-container button {
     margin: 25px;
     padding: 16px 70px;
@@ -78,7 +114,7 @@ body {
     text-transform: uppercase;
     text-decoration: none;
 }
-
+ 
 .button-container button:hover {
     background: #FFEE96;
     color: #49D2F0;
@@ -92,31 +128,58 @@ body {
 .scroll-container {
     display: flex;
     overflow-x: auto;
-    white-space: nowrap;
-    width: 90%;
+    width: 100%;
+    height: 250px;
     margin: 0 20px;
     margin-top: 20px;
-    border: 1px solid #ccc;
+    border: none;
     padding: 10px;
     box-sizing: border-box;
+    scroll-behavior: smooth; /* Adiciona rolagem suave */
+    gap: 15px; /* Espaço entre os itens */
 }
+/* Customização da barra de rolagem */
+.scroll-container::-webkit-scrollbar {
+    height: 10px; /* Altura da barra de rolagem */
+}
+ 
+.scroll-container::-webkit-scrollbar-track {
+    background: #d5f7ff; /* Cor de fundo da barra */
+    border-radius: 50px; /* Arredondar a barra */
+}
+ 
+.scroll-container::-webkit-scrollbar-thumb {
+    background-color: #49D2F0; /* Cor do controle da barra */
+    border-radius: 10px; /* Arredondar o controle */
+    border: 2px solid #d5f7ff; /* Espaço entre o controle e a barra */
+}
+ 
+.scroll-container::-webkit-scrollbar-thumb:hover {
+    background-color: #16a3c3; /* Cor ao passar o mouse sobre o controle */
+}
+ 
 .image-wrapper {
     display: inline-block;
+    width: 100px;
     border: 2px solid #78E7FF;
     border-radius: 15px;
     margin: 10px;
-    padding: 12.65px;
+    padding: 20px;
 }
 .image-wrapper img {
-    height: 80px;
-    width: 80px;
+    height: 100px;
+    width: 90px;
     border-radius: 10px;
 }
 .image-wrapper p {
     text-align: center;
-    font-size: 10px;
+    font-size: 12px;
     font-family: "Spline Sans Mono", monospace;
 }
+a {
+    text-decoration: none;
+    color: #000000;
+  }
 .large-button-container {
     display: flex;
     justify-content: center;
@@ -154,62 +217,91 @@ body {
 .large-button:hover {
     background-color: #218838;
 }
-.button-label {
+.button-label_1 {
     margin-top: 5px;
-    font-size: 16px;
+    font-size: 30px;
     text-align: center;
     font-family: "Wendy One", sans-serif;
-    color: #4C4C4C;
+    color: #B983B2;
+}
+.button-label_2 {
+    margin-top: 5px;
+    font-size: 30px;
+    text-align: center;
+    font-family: "Wendy One", sans-serif;
+    color: #fb2626;
 }
 .info {
     font-family: "Spline Sans Mono", monospace;
-    font-size: 12px;
-}
-.footer {
-    padding: 5px;
-    background-color: #FFFA76;
-    font-family: "Sofia Sans", sans-serif;
     font-size: 20px;
 }
-.footer-columns {
-    display: flex;
-    justify-content: center;
-    
-}
-.footer-column {
-    flex: 1;
-    padding: 10px;
+.footer {
+    padding: 3px;
+    background-color: #FFFA76;
+    font-family: "Sofia Sans", sans-serif;
+    font-size: 5px;
 }
 .footer-info {
     text-align: center;
     padding: 5px;
     border-radius: 44px;
     font-size: 10px;
-    color: #78E7FF;
+    color: #000000;
 }
-.modal {
+.menu-button {
+    cursor: pointer;
+  }
+ 
+  .modal {
     display: none;
     position: fixed;
     z-index: 1;
-    left: 0;
-    top: 0;
+    top: 10px;
+    left: 25px; /* Posiciona o modal na lateral direita */
+    width: 450px; /* Largura do modal */
+    height: 710px;
+    overflow-y: auto;
+    white-space: nowrap;
+    background-color: #f8f8f8f1;
+    border-radius: 15px;
+    scroll-behavior: smooth;
+  }
+  .modal::-webkit-scrollbar {
+    height: 10px; /* Altura da barra de rolagem */
+    width: 13px;  /* Largura da barra de rolagem */
+}
+ 
+.modal::-webkit-scrollbar-track {
+    background: #d5f7ff; /* Cor de fundo da barra */
+    border-radius: 50px; /* Arredondar a barra */
+}
+ 
+.modal::-webkit-scrollbar-thumb {
+    background-color: #49D2F0; /* Cor do controle da barra */
+    border-radius: 10px; /* Arredondar o controle */
+    border: 2px solid #d5f7ff; /* Espaço entre o controle e a barra */
+}
+ 
+.modal::-webkit-scrollbar-thumb:hover {
+    background-color: #16a3c3; /* Cor ao passar o mouse sobre o controle */
+}
+  .modal-content {
+    text-align: center;
+    background-color: #ffffff50;
+    border: none;
+    border-radius: 15px;
     width: 100%;
     height: 100%;
-    overflow: auto;
-    background-color: rgba(0,0,0,0.4);
-}
-.modal-content {
-    background-color: #fefefe;
-    margin: 15% auto;
-    padding: 20px;
-    border: 1px solid #888;
-    width: 80%;
-    text-align: center;
-    font-family: "Wendy One", sans-serif;
-    font-size: 18px;
-    color: #4C4C4C;
-}
-.close {
+  }
+  .menu {
+    background-color: #ffffff50;
+    padding: 10px;
+  }
+ 
+  .menu.active {
+    display: block;
+  }
+  .close {
     color: #aaa;
     float: right;
     font-size: 30px;
@@ -217,11 +309,7 @@ body {
 }
 .close:hover,
 .close:focus {
-    color: black;
-    text-decoration: none;
     cursor: pointer;
-    transform: scale(2.3);
-    transition: 1.2s;
 }
 .modal-button {
     display: block;
@@ -237,7 +325,6 @@ body {
     color: #ffffff;
     transition: 1.0s;
 }
-
 .modal-button:hover {
     background: #FFEE96;
     color: #49D2F0;
@@ -248,7 +335,16 @@ body {
                 0 0 40px #49D2F0,
                 0 0 70px #49D2F0;
 }
-
+.title1{
+    font-family: "Wendy One", sans-serif;
+    font-size: 30px;
+    color: #49D2F0;
+}
+.subtitle2{
+    font-family: "Wendy One", sans-serif;
+    font-size: 20px;
+    color: #16a3c3;
+}
 .whatsapp-btn {
     position: fixed;
     bottom: 15px; /* Distância da parte inferior da página */
@@ -267,22 +363,22 @@ body {
     cursor: pointer;
     transition: background-color 0.3s ease; /* Transição suave ao passar o mouse */
   }
-
+ 
   .whatsapp-btn:hover {
     background-color: #37A9C1; /* Mudança de cor no hover para um azul mais escuro */
   }
-
+ 
   .whatsapp-container {
     display: flex;
     align-items: center;
   }
-
+ 
   .whatsapp-icon {
     width: 20px; /* Ícone de WhatsApp ajustado para 20px */
     height: 20px;
     margin-right: 5px;
   }
-
+ 
   .whatsapp-text {
     font-size: 10px; /* Texto pequeno */
     color: #ffffff; /* Cor branca para o texto */

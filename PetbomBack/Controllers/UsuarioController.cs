@@ -44,6 +44,12 @@ namespace PetBomBack.Controllers
         [HttpPost]
         public async Task<ActionResult<Usuario>> PostUsuario(Usuario usuario)
         {
+            var user = _context.Usuarios.FirstOrDefault(u => u.Email == usuario.Email || u.Telefone == usuario.Telefone);
+            if (user != null)
+            {
+                return Conflict("Esse usuário já existe");
+            }
+    
             _context.Usuarios.Add(usuario);
             await _context.SaveChangesAsync();
 

@@ -4,7 +4,6 @@ body {
     justify-content: center;
     align-items: center;
     margin: 0;
-
 }
 
 
@@ -106,7 +105,7 @@ body {
    display: flex;
     width: 280px;
     height: 260px;
-   margin-top: -765px; 
+   margin-top: -1020px; 
 }
 
 .date-container {
@@ -211,7 +210,7 @@ body {
 
 .ossinhos3 img {
     width: 710px;
-    height: 780px;
+    height: 850px;
     transform: translateX(-53%); /* Move a imagem para a esquerda */
 }
 
@@ -268,3 +267,37 @@ body {
     font-size: 10px; /* Texto pequeno */
     color: #ffffff; /* Cor branca para o texto */
   }
+
+  .clique {
+    text-decoration: none;
+    color: #78E7FF;
+    display: block; /* Faz com que o link ocupe toda a linha */
+    text-align: center; /* Centraliza o link */
+    margin-top: 10px; /* Espaçamento entre o botão e o link */
+    font-size: 18px; /* Tamanho do texto */
+}
+
+.clique:hover {
+    color: #007BFF;
+    transition: 0.5s;
+}
+.VerMais {
+    display: inline-block; /* Para que as transformações funcionem corretamente */
+    text-decoration: none; /* Remove o sublinhado do link */
+    font-family: 'Times New Roman', Times, serif; /* Define a fonte */
+    color: #333; /* Cor do texto padrão */
+    background-color: transparent; /* Cor de fundo padrão */
+    padding: 10px 20px; /* Adiciona espaçamento interno */
+    border: 2px solid transparent; /* Inicialmente sem borda */
+    border-radius: 5px; /* Borda arredondada */
+    transition: color 0.5s, background-color 0.5s, transform 0.5s, box-shadow 0.5s; /* Transições suaves */
+}
+
+.VerMais:hover {
+    color: #007BFF;
+    background-color: transparent; /* Altera a cor de fundo ao passar o mouse */
+    transform:  scale(1.1); /* Move, rotaciona e aumenta o tamanho */
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3); /* Adiciona sombra ao redor */
+}
+
+

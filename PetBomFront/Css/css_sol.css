@@ -23,6 +23,37 @@ header {
     display: block;
     margin: 0 auto; 
 }
+.button-container {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+}
+
+.button-container button {
+    margin: 25px;
+    padding: 16px 70px;
+    font-size: 15px;
+    border: none;
+    border-radius: 25px;
+    background-color: #78E7FF;
+    color: white;
+    cursor: pointer;
+    letter-spacing: 8px;
+    transition: 1.0s;
+    text-transform: uppercase;
+    text-decoration: none;
+}
+
+.button-container button:hover {
+    background: #FFEE96;
+    color: #49D2F0;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    border-radius: 5px;
+    box-shadow: 0 0 5px #49D2F0,
+                0 0 20px #49D2F0,
+                0 0 40px #49D2F0,
+                0 0 70px #49D2F0;
+}
 
 .textos {
     max-width: 1200px;
@@ -118,3 +149,17 @@ strong {
     font-size: 10px; /* Texto pequeno */
     color: #ffffff; /* Cor branca para o texto */
   }
+
+  .footer {
+    padding: 3px;
+    background-color: #FFFA76;
+    font-family: "Sofia Sans", sans-serif;
+    font-size: 5px;
+}
+.footer-info {
+    text-align: center;
+    padding: 5px;
+    border-radius: 44px;
+    font-size: 10px;
+    color: #000000;
+}

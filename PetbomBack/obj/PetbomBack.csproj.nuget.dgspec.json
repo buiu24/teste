@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\kauaCarmo\\Desktop\\fonback\\PetbomBack\\PetbomBack.csproj": {}
+    "C:\\Users\\kauaCarmo\\Desktop\\fonback\\petbomback\\PetbomBack.csproj": {}
   },
   "projects": {
-    "C:\\Users\\kauaCarmo\\Desktop\\fonback\\PetbomBack\\PetbomBack.csproj": {
+    "C:\\Users\\kauaCarmo\\Desktop\\fonback\\petbomback\\PetbomBack.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\kauaCarmo\\Desktop\\fonback\\PetbomBack\\PetbomBack.csproj",
+        "projectUniqueName": "C:\\Users\\kauaCarmo\\Desktop\\fonback\\petbomback\\PetbomBack.csproj",
         "projectName": "PetbomBack",
-        "projectPath": "C:\\Users\\kauaCarmo\\Desktop\\fonback\\PetbomBack\\PetbomBack.csproj",
+        "projectPath": "C:\\Users\\kauaCarmo\\Desktop\\fonback\\petbomback\\PetbomBack.csproj",
         "packagesPath": "C:\\Users\\kauaCarmo\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\kauaCarmo\\Desktop\\fonback\\PetbomBack\\obj\\",
+        "outputPath": "C:\\Users\\kauaCarmo\\Desktop\\fonback\\petbomback\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\kauaCarmo\\AppData\\Roaming\\NuGet\\NuGet.Config"

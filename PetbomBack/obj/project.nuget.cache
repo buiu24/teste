@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "DGl1ovscUR4=",
+  "dgSpecHash": "jPi1OYkwCSA=",
   "success": true,
-  "projectFilePath": "C:\\Users\\kauaCarmo\\Desktop\\fonback\\PetbomBack\\PetbomBack.csproj",
+  "projectFilePath": "C:\\Users\\kauaCarmo\\Desktop\\fonback\\petbomback\\PetbomBack.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\kauaCarmo\\.nuget\\packages\\humanizer.core\\2.14.1\\humanizer.core.2.14.1.nupkg.sha512",
     "C:\\Users\\kauaCarmo\\.nuget\\packages\\microsoft.aspnetcore.openapi\\8.0.5\\microsoft.aspnetcore.openapi.8.0.5.nupkg.sha512",

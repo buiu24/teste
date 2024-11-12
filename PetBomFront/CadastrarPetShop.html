@@ -1,44 +1,46 @@
 <!DOCTYPE html>
 <html lang="pt-br">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="Css/CadastrarPetShop.css">
-    <title>PET BOM</title>
-</head>
-<body>
-    <div class="container">
-        <div class="ossinhos3">
-            <img src="img/ossinhos.jpg" alt="ossinhos">
-        </div>
-        <div class="ossinhos4">
-            <img src="img/ossinhos.jpg" alt="ossinhos">
-        </div>
-       
-        <div class="box" id="registerBox">
-            <form id="petForm">
-                <fieldset>
-                    <legend class="legenda">
-                        <span class="pet-color">Pet</span> <span class="bom-color">Bom</span>
-                    </legend>
-                    <br><br>
-                    <div class="inputBox">
-                        <input type="text" name="name" id="nomeDoPetShop" class="inputUser" required>
-                        <label for="nomeDoPetShop" class="labelInput">Nome do PetShop : </label>
-                    </div>
-                    <br><br>
-                    <div class="inputBox">
-                        <input type="tel" name="contato" id="contato" class="inputUser" required>
-                        <label for="contato" class="labelInput">Contato : </label>
-                    </div>
-                    <br><br>
-                    <div class="inputBox">
-                        <input type="text" name="endereco" id="endereco" class="inputUser" required>
-                        <label for="endereco" class="labelInput">Localização : </label>
-                    </div>
-                    <br><br>
-                    <div class="inputBox">
-                        <input type="text" name="servicosOferecidos" id="servicosOferecidos" class="inputUser" required>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="Css/CadastrarPetShop.css">
+        <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/toastify-js/src/toastify.min.css">
+        <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/toastify-js"></script>
+        <title>PET BOM</title>
+    </head>
+    <body>
+        <div class="container">
+            <div class="ossinhos3">
+                <img src="img/ossinhos.jpg" alt="ossinhos">
+            </div>
+            <div class="ossinhos4">
+                <img src="img/ossinhos.jpg" alt="ossinhos">
+            </div>
+            
+            <div class="box" id="registerBox">
+                <form id="petForm">
+                    <fieldset>
+                        <legend class="legenda">
+                            <span class="pet-color">Pet</span> <span class="bom-color">Bom</span>
+                        </legend>
+                        <br><br>
+                        <div class="inputBox">
+                            <input type="text" name="name" id="nomeDoPetShop" class="inputUser" required>
+                            <label for="nomeDoPetShop" class="labelInput">Nome do PetShop : </label>
+                        </div>
+                        <br><br>
+                        <div class="inputBox">
+                            <input type="text" name="contato" id="contato" class="inputUser" required>
+                            <label for="contato" class="labelInput">Email : </label>
+                        </div>
+                        <br><br>
+                        <div class="inputBox">
+                            <input type="text" name="endereco" id="endereco" class="inputUser" required>
+                            <label for="endereco" class="labelInput">Localização : </label>
+                        </div>
+                        <br><br>
+                        <div class="inputBox">
+                            <input type="text" name="servicosOferecidos" id="servicosOferecidos" class="inputUser" required>
                         <label for="servicosOferecidos" class="labelInput">Serviços Oferecidos : </label>
                     </div>
                     <br><br>
@@ -64,16 +66,18 @@
                     <br>
                     <a aria-label="Chat on WhatsApp" href="https://wa.me/5514998952668" class="whatsapp-btn">
                         <div class="whatsapp-container">
-                          <img alt="Chat on WhatsApp" src="Whatsapp.png" class="whatsapp-icon" />
+                            <img alt="Chat on WhatsApp" src="Whatsapp.png" class="whatsapp-icon" />
                           <span class="whatsapp-text">Suporte</span>
                         </div>
-                      </a>
+                    </a>
                     <button class="btn" type="submit">Cadastrar</button>
                 </fieldset>
             </form>
         </div>
-        <a class="clique" href="pag_2/LoveDog.html">Voltar</a>
+        <a class="clique" onclick="history.back()">Voltar</a>
+        <div>
         <img class="logocadastro" src="img/logocadastro.png">
+    </div>
         <div id="successMessage" style="display:none; color: green;">
             Cadastro feito com sucesso!
         </div>

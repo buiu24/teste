@@ -1,330 +1,608 @@
-body {
-    margin: 0;
-    display: flex;
-    flex-direction: column;
-    min-height: 100vh;
+body{
+  margin: 15px;
+  padding: 0;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-image: url('../img/fundo_principal.png');
+}
+.container {
+  background-color: rgba(255, 255, 255); 
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  max-width: 1000px; /* Largura maior */
+  width: 100%; /* Para garantir que a largura total seja usada até o limite do max-width */
+  text-align: center;
+}
+
+.slider-container {
+  max-width: 1000px;
+  position: relative;
+  margin: auto;
+}
+
+.slide {
+  display: none;
+  width: 900px;
+  height: 400px;
+  overflow: hidden;
+  border: none;
+  border-radius: 15px;
+  margin-bottom: 20px;
+}
+.slider img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
 }
 .header {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 10px 20px;
-    background-color: #FFFA76;
-}
-.logo {
-    display: flex;
-    align-items: center;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 20px;
+  background-color: #FFFA76;
+  border-radius: 10px;
 }
 .logo img {
-    height: 150px;
+  height: 100px;
+}
+a {
+text-decoration: none;
+color: #000000;
 }
 .search-bar {
-    flex-grow: 1;
-    max-width: 1000px;
-    margin: 0 20px;
+  flex-grow: 1;
+  max-width: 1000px;
+  margin: 0 20px;
 }
 .search-bar input {
-    font-size: 20px;
-    width: 100%;
-    padding: 8px;
-    background-color: #D9D9D9;
-    border: none;
-    border-radius: 25px;
-    font-family: "Sofia Sans", sans-serif;
-}
-.icon {
-    display: flex;
-    align-items: center;
+  font-size: 16px;
+  text-align: center;
+  width: 100%;
+  padding: 8px;
+  background-color: #fbfbfb;
+  border: none;
+  border-radius: 25px;
+  font-family: "Sofia Sans", sans-serif;
 }
 .icon button {
-    color: #78E7FF;
-    height: 100px;
-    width: 100px;
-    font-size: 40px;
-    border: none;
-    outline: none;
-    background: none;
-    cursor: pointer;
+  color: #78E7FF;
+  height: 50px;
+  width: 50px;
+  font-size: 30px;
+  border: none;
+  outline: none;
+  background: none;
+  cursor: pointer;
 }
 .main {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    margin-top: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 20px;
 }
-.image-slider {
-    width: 90%;
-    height: 700px; /* Ajuste conforme necessário */
-    overflow: hidden;
-    border: 2px solid #ccc;
-    border-radius: 4px;
+
+.dot {
+  cursor: pointer;
+  height: 15px;
+  width: 15px;
+  margin: 0 2px;
+  background-color: #49D2F0;
+  border-radius: 50%;
+  display: inline-block;
+  transition: background-color 0.6s ease;
 }
-.image-slider img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
+
+.active, .dot:hover {
+  background-color: #16a3c3;
 }
+
 .button-container {
-    display: flex;
-    justify-content: center;
-    width: 100%;
-    font-family: "Spline Sans Mono", monospace;
+  display: flex;
+  justify-content: center;
+  width: 100%;
 }
 
 .button-container button {
-    margin: 25px;
-    padding: 16px 70px;
-    font-size: 20px;
-    border: none;
-    border-radius: 25px;
-    background-color: #78E7FF;
-    color: white;
-    cursor: pointer;
-    letter-spacing: 8px;
-    transition: 1.0s;
-    text-transform: uppercase;
-    text-decoration: none;
+  margin: 25px;
+  padding: 16px 70px;
+  font-size: 15px;
+  border: none;
+  border-radius: 25px;
+  background-color: #78E7FF;
+  color: white;
+  cursor: pointer;
+  letter-spacing: 8px;
+  transition: 1.0s;
+  text-transform: uppercase;
+  text-decoration: none;
 }
 
 .button-container button:hover {
-    background: #FFEE96;
-    color: #49D2F0;
-    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
-    border-radius: 5px;
-    box-shadow: 0 0 5px #49D2F0,
-                0 0 20px #49D2F0,
-                0 0 40px #49D2F0,
-                0 0 70px #49D2F0;
+  background: #FFEE96;
+  color: #49D2F0;
+  font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+  border-radius: 5px;
+  box-shadow: 0 0 5px #49D2F0,
+              0 0 20px #49D2F0,
+              0 0 40px #49D2F0,
+              0 0 70px #49D2F0;
 }
+
 .scroll-container {
-    display: flex;
-    overflow-x: auto;
-    white-space: nowrap;
-    width: 90%;
-    margin: 0 50px;
-    margin-top: 20px;
-    border: 1px solid #ccc;
-    padding: 10px;
-    box-sizing: border-box;
+  display: flex;
+  overflow-x: auto;
+  white-space: nowrap;
+  width: 100%;
+  height: 250px;
+  margin: 0 20px;
+  margin-top: 20px;
+  border: none;
+  padding: 10px;
+  box-sizing: border-box;
+  scroll-behavior: smooth; /* Adiciona rolagem suave */
+  gap: 15px; /* Espaço entre os itens */
 }
-.scroll-container img {
-    text-align: center;
-    height: 100px;
-    width: 100px;
-    border-radius: 4px;
+
+/* Customização da barra de rolagem */
+.scroll-container::-webkit-scrollbar {
+  height: 10px; /* Altura da barra de rolagem */
 }
-.image-wrapper{
-    display: inline-block;
-    border: 3px solid #78E7FF;
-    border-radius: 5px;
-    margin: 10px;
-    padding: 5px;
-    
+
+.scroll-container::-webkit-scrollbar-track {
+  background: #d5f7ff; /* Cor de fundo da barra */
+  border-radius: 50px; /* Arredondar a barra */
 }
-.image-wrapper img{
-    height: 100px;
+
+.scroll-container::-webkit-scrollbar-thumb {
+  background-color: #49D2F0; /* Cor do controle da barra */
+  border-radius: 10px; /* Arredondar o controle */
+  border: 2px solid #d5f7ff; /* Espaço entre o controle e a barra */
+}
+
+.scroll-container::-webkit-scrollbar-thumb:hover {
+  background-color: #16a3c3; /* Cor ao passar o mouse sobre o controle */
+}
+
+.image-wrapper {
+  display: inline-block;
+  width: 100px;
+  border: 2px solid #78E7FF;
+  border-radius: 15px;
+  margin: 10px;
+  padding: 20px;
+}
+.image-wrapper img {
+  height: 50px;
+  width: 90px;
+  border-radius: 10px;
 }
 .image-wrapper p {
-    text-align: center;
-    font-size: 10px;
-    font-family: "Spline Sans Mono", monospace;
+  text-align: center;
+  font-size: 12px;
+  font-family: "Spline Sans Mono", monospace;
 }
-.two-column-container {
-    display: flex;
-    justify-content: space-around;
-    width: 90%;
-    margin-top: 20px;
+.large-button-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 20px;
 }
-.column {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    width: 30%; /* Assegura que cada coluna ocupa 45% do espaço disponível */
+.large-button-wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 0 50px;
 }
-.column img {
-    width: 170%;
-    height: 270px;
-    margin-bottom: 10px; /* Espaçamento entre as imagens */
-    border-radius: 5%;
+.large-button {
+  position: relative;
+  width: 250px;
+  height: 250px;
+  font-size: 14px;
+  border: none;
+  border-radius: 50%;
+  background-color: #ffffff;
+  color: white;
+  cursor: pointer;
+  overflow: hidden;
 }
-.column p {
-    text-align: center;
-    font-size: 20px;
-    color: #333;
-    font-family: "Wendy One", sans-serif;
+.large-button img {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 50%;
 }
-.single-column-container {
-    text-align: center;
-    width: 90%;
-    margin-top: 20px;
-    background-color: #78E7FF; /* Substitua pelo código da cor desejada */
-    padding: 20px; /* Adiciona algum preenchimento para um melhor visual */
-    border-radius: 8px; /* Adiciona bordas arredondadas */
+.large-button:hover {
+  background-color: #218838;
 }
-.text-container {
-    font-family: "Sofia Sans", sans-serif;
-    margin-bottom: 20px;
+.button-label_1 {
+  margin-top: 5px;
+  font-size: 30px;
+  text-align: center;
+  font-family: "Wendy One", sans-serif;
+  color: #B983B2;
 }
-.selector-container {
-    width: 100%;
-    margin-top: 20px;
-    font-family: "Sofia Sans", sans-serif;
+.button-label_2 {
+  margin-top: 5px;
+  font-size: 30px;
+  text-align: center;
+  font-family: "Wendy One", sans-serif;
+  color: #fb2626;
 }
-.selector-container label {
-    font-family: "Sofia Sans", sans-serif;
-    margin: 5px 0;
+.info {
+  font-family: "Spline Sans Mono", monospace;
+  font-size: 20px;
 }
-.selector-container select {
-    font-family: "Sofia Sans", sans-serif;
-    text-align: center;
-    width: 400px; /* Defina a largura desejada */
-    padding: 6px;
-    border: none;
-    border-radius: 20px;
-    margin-bottom: 10px;
-    background-color: #D9D9D9;
+.VerMais{
+background: #FFEE96;
+width: 50%;
+border: none;
+padding: 15px;
+color: #49D2F0;
+font-size: 16px;
+cursor: pointer;
+border-radius: 50px;
+letter-spacing: 4px;
+transition: .5s;
+text-transform: uppercase;
+text-decoration: none;
+display: inline-block;
 }
-.sliding-columns {
-    display: flex;
-    justify-content: space-around;
-    width: 90%;
-    margin-top: 20px;
-}
-.sliding-images {
-    display: flex;
-    flex-direction: row;
-    width: 100%;
-    overflow: hidden;
-    border: 1px solid #ccc;
-    border-radius: 4px;
-}
-.sliding-image-info {
-    margin-bottom: 20px; /* Espaçamento entre cada par de foto e informações */
-}
-.sliding-image-info .info {
-    text-align: center;
-    margin-top: 5px; /* Espaçamento entre a foto e as informações */
-}
-.sliding-images img {
-    width: 100%;
-    height: auto;
-    transition: transform 1s ease-in-out;
+.VerMais:hover{
+background: #FFEE96;
+color: #07a6ca;
+border-radius: 5px;
+box-shadow: 0 0 5px #49D2F0,
+            0 0 20px #49D2F0,
+            0 0 40px #49D2F0,
+            0 0 70px #49D2F0;
 }
 .footer {
-    padding: 20px;
-    background-color: #FFFA76;
-    font-family: "Sofia Sans", sans-serif;
-    font-size: 20px;
-}
-.footer-columns {
-    display: flex;
-    justify-content: space-between;
-}
-.footer-column {
-    flex: 1;
-    padding: 10px;
-}
-.footer-column img {
-    max-width: 100%;
-    height: auto;
+padding: 3px;
+background-color: #FFFA76;
+font-family: "Sofia Sans", sans-serif;
+font-size: 5px;
 }
 .footer-info {
-    text-align: center;
-    padding: 10px;
-    border-radius: 4px;
-    font-size: 20px;
+text-align: center;
+padding: 5px;
+border-radius: 44px;
+font-size: 10px;
+color: #000000;
 }
-/* Estilos para o Modal */
+.menu-button {
+  cursor: pointer;
+}
+
 .modal {
-    display: none; /* Oculto por padrão */
-    position: fixed; /* Fixo no fundo */
-    z-index: 1; /* Fica em cima */
-    left: 0;
-    top: 0;
-    width: 100%; /* Largura total */
-    height: 100%; /* Altura total */
-    overflow: auto; /* Habilita rolagem se necessário */
-    background-color: rgb(0,0,0); /* Fundo preto com opacidade */
-    background-color: rgba(0,0,0,0.4); /* Preto com opacidade */
+  display: none;
+  position: fixed;
+  z-index: 1;
+  top: 10px;
+  left: 25px; /* Posiciona o modal na lateral direita */
+  width: 450px; /* Largura do modal */
+  height: 710px;
+  overflow-y: auto;
+  white-space: nowrap;
+  background-color: #f8f8f8f1;
+  border-radius: 15px;
+  scroll-behavior: smooth;
+}
+.modal::-webkit-scrollbar {
+  height: 10px; /* Altura da barra de rolagem */
+  width: 13px;  /* Largura da barra de rolagem */
 }
 
-/* Conteúdo do Modal */
+.modal::-webkit-scrollbar-track {
+  background: #d5f7ff; /* Cor de fundo da barra */
+  border-radius: 50px; /* Arredondar a barra */
+}
+
+.modal::-webkit-scrollbar-thumb {
+  background-color: #49D2F0; /* Cor do controle da barra */
+  border-radius: 10px; /* Arredondar o controle */
+  border: 2px solid #d5f7ff; /* Espaço entre o controle e a barra */
+}
+
+.modal::-webkit-scrollbar-thumb:hover {
+  background-color: #16a3c3; /* Cor ao passar o mouse sobre o controle */
+}
 .modal-content {
-    background-color: #fefefe;
-    margin: 15% auto; /* 15% do topo e centralizado */
-    padding: 20px;
-    border: 1px solid #888;
-    width: 80%; /* Pode ser ajustado conforme necessário */
-    text-align: center;
-    font-family: "Wendy One", sans-serif;
-    font-size: 20px;
-    color: #4C4C4C;
+  text-align: center;
+  background-color: #ffffff50;
+  border: none;
+  border-radius: 15px;
+  width: 100%;
+  height: 100%;
+}
+.menu {
+  background-color: #ffffff50;
+  padding: 10px;
 }
 
-/* Botão para fechar o modal */
+.menu.active {
+  display: block;
+}
 .close {
-    color: #aaa;
-    float: right;
-    font-size: 50px;
-    font-weight: bold;
+  color: #aaa;
+  float: right;
+  font-size: 30px;
+  font-weight: bold;
 }
-
 .close:hover,
 .close:focus {
-    color: black;
-    text-decoration: none;
-    cursor: pointer;
+  cursor: pointer;
 }
-
-/* Estilos para os botões dentro do modal */
 .modal-button {
-    display: block; /* Faz com que os botões sejam exibidos como blocos */
-    width: 100%; /* Faz com que os botões ocupem toda a largura disponível */
-    margin: 10px 0; /* Margem superior e inferior para espaçamento */
-    padding: 10px;
-    font-family: "Sofia Sans", sans-serif;
-    font-size: 20px;
-    cursor: pointer;
-    border-radius: 50px;
-    border: none;
-    background-color: #78E7FF;
-    color:#ffffff
+  display: block;
+  width: 100%;
+  margin: 10px 0;
+  padding: 10px;
+  font-family: "Sofia Sans", sans-serif;
+  font-size: 16px;
+  cursor: pointer;
+  border-radius: 25px;
+  border: none;
+  background-color: #78E7FF;
+  color: #ffffff;
+  transition: 1.0s;
+}
+.modal-button:hover {
+  background: #FFEE96;
+  color: #49D2F0;
+  font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+  border-radius: 5px;
+  box-shadow: 0 0 5px #49D2F0,
+              0 0 20px #49D2F0,
+              0 0 40px #49D2F0,
+              0 0 70px #49D2F0;
+}
+.title1{
+  font-family: "Wendy One", sans-serif;
+  font-size: 30px;
+  color: #49D2F0;
+}
+.subtitle2{
+  font-family: "Wendy One", sans-serif;
+  font-size: 20px;
+  color: #16a3c3;
 }
 .whatsapp-btn {
-    position: fixed;
-    bottom: 15px; /* Distância da parte inferior da página */
-    right: 15px;  /* Distância da parte direita da página */
-    z-index: 1000; /* Garante que o botão fique por cima de outros elementos */
-    background-color: #49D2F0; /* Cor de fundo azul */
-    color: #ffffff; /* Cor do texto */
-    font-family: Arial, sans-serif;
-    font-weight: bold;
-    border: none; /* Remove a borda */
-    border-radius: 20px; /* Bordas arredondadas */
-    padding: 5px 10px; /* Espaçamento menor dentro do botão */
-    display: flex;
-    align-items: center;
-    text-decoration: none; /* Remove o sublinhado do link */
-    cursor: pointer;
-    transition: background-color 0.3s ease; /* Transição suave ao passar o mouse */
-  }
+  position: fixed;
+  bottom: 15px; /* Distância da parte inferior da página */
+  right: 15px;  /* Distância da parte direita da página */
+  z-index: 1000; /* Garante que o botão fique por cima de outros elementos */
+  background-color: #49D2F0; /* Cor de fundo azul */
+  color: #ffffff; /* Cor do texto */
+  font-family: Arial, sans-serif;
+  font-weight: bold;
+  border: none; /* Remove a borda */
+  border-radius: 20px; /* Bordas arredondadas */
+  padding: 5px 10px; /* Espaçamento menor dentro do botão */
+  display: flex;
+  align-items: center;
+  text-decoration: none; /* Remove o sublinhado do link */
+  cursor: pointer;
+  transition: background-color 0.3s ease; /* Transição suave ao passar o mouse */
+}
 
-  .whatsapp-btn:hover {
-    background-color: #37A9C1; /* Mudança de cor no hover para um azul mais escuro */
-  }
+.whatsapp-btn:hover {
+  background-color: #37A9C1; /* Mudança de cor no hover para um azul mais escuro */
+}
 
-  .whatsapp-container {
-    display: flex;
-    align-items: center;
-  }
+.whatsapp-container {
+  display: flex;
+  align-items: center;
+}
 
-  .whatsapp-icon {
-    width: 20px; /* Ícone de WhatsApp ajustado para 20px */
-    height: 20px;
-    margin-right: 5px;
-  }
+.whatsapp-icon {
+  width: 20px; /* Ícone de WhatsApp ajustado para 20px */
+  height: 20px;
+  margin-right: 5px;
+}
 
-  .whatsapp-text {
-    font-size: 10px; /* Texto pequeno */
-    color: #ffffff; /* Cor branca para o texto */
-  }
+.whatsapp-text {
+  font-size: 10px; /* Texto pequeno */
+  color: #ffffff; /* Cor branca para o texto */
+}
+
+.carousel-container {
+  display: flex;
+  justify-content: space-between;
+  padding: 20px;
+}
+
+.carousel {
+  width: 45%;
+  margin-right: 20px;
+}
+
+.carousel:last-child {
+  margin-right: 0;
+}
+
+.nav {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 10px;
+}
+
+.slides {
+  display: flex;
+  overflow-x: auto;
+  padding: 10px;
+}
+
+.slide {
+  flex: 0 0 200px; /* ajuste o valor de acordo com a largura desejada */
+  margin: 10px;
+  padding: 10px;
+  border: 1px solid #ddd;
+  border-radius: 10px;
+  background-color: #fff;
+  cursor: pointer;
+}
+
+.slider-container {
+  position: relative;
+  width: 100%;
+  height: 300px; /* ajuste o valor de acordo com a altura desejada */
+  overflow: hidden;
+}
+
+.slider {
+  position: relative;
+  width: 100%;
+  height: 100%;
+}
+
+.slider-image {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-size: cover;
+  background-position: center;
+  transition: opacity 0.5s;
+}
+
+.slider-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.half-width {
+  width: 50%;
+  float: left;
+  padding: 20px;
+}
+
+.image-holder {
+  position: relative;
+  width: 100%;
+  height: 200px; /* altura da imagem */
+  background-color: #f0f0f0;
+  border: 1px solid #ddd;
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+.image-holder img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.image-text {
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  font-size: 18px;
+  font-weight: bold;
+  color: #333;
+}
+.image-text {
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  font-size: 18px;
+  font-weight: bold;
+  color: #333;
+}
+.image-box {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  width: 100%; /* ou width: 100vw; */
+}
+
+.image-wrapper {
+  width: 50%;
+  padding: 20px;
+}
+
+.image-holder {
+  position: relative;
+}
+
+.image-holder img {
+  width: 100%;
+  height: 200px; /* altura da imagem */
+  object-fit: cover;
+}
+
+.image-text {
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  font-size: 18px;
+  font-weight: bold;
+  color: #333;
+}
+.ladoalado{
+  display: flex;
+  justify-content: center;
+  gap: 50px
+}
+
+.div-esquerda {
+  width: 20%;
+  border: 2px solid #49D2F0;
+  border-radius: 15px;
+  background-color: #f0f0f000; 
+  padding: 35px;
+  margin: 10px; 
+}
+
+.div-direita {
+  width: 20%; 
+  border: 2px solid #49D2F0;
+  border-radius: 15px;
+  background-color: #f0f0f000; 
+  padding: 35px; 
+  margin: 10px; 
+}
+.quatrodiv {
+  display: flex;
+  justify-content: center;
+}
+.div1, .div2, .div3, .div4 {
+  width: 25%; /* ajuste o tamanho de cada div */
+  height: 250px;
+  border: 2px solid #49D2F0;
+  border-radius: 15px;
+  background-color: #f0f0f000; /* cor de fundo de cada div */
+  padding: 20px; /* espaçamento interno de cada div */
+  margin: 10px; /* espaçamento externo de cada div */
+}
+.holder {
+  position: relative;
+}
+.holder img {
+  width: 100%;
+  height: 100%; /* altura da imagem */
+  object-fit: cover;
+}
+.holder p {
+  font-family: "Baloo Paaji 2", sans-serif;
+  font-optical-sizing: auto;
+  font-style: normal;
+}
+
+.imagemCachorro {
+  justify-content: center; /* Centraliza horizontalmente */
+  align-items: center; /* Centraliza verticalmente */
+  width: 100%; /* Ocupa toda a largura do container */
+}
+
+.imagemcachorro {
+  width: 100%; /* Ajusta para o tamanho máximo permitido pelo container */
+  border-radius: 55px; /* Bordas arredondadas */
+}
